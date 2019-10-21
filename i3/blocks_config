@@ -1,0 +1,78 @@
+# [battery]
+# command=source battery
+# interval=30
+# LABEL=BAT
+# BAT_NUMBER=0
+
+#[disk]
+#command=$SCRIPT_DIR/disk
+# L ABEL=HOME 
+#DIR=/mnt/data
+# interval=30
+
+
+# Global properties
+separator=true
+separator_block_width=15
+
+[documentation]
+full_text=Documentation
+website=https://vivien.github.io/i3blocks
+command=xdg-open "$website"
+color=#d70000
+
+[greetings]
+full_text=Open GitHub
+color=#507cb8
+website_git=https://github.com
+command=xdg-open "$website_git"
+
+[ip]
+label=IP: 
+command=hostname -i
+interval=once
+color=#5fd700
+
+[wifi]
+label=WIFI:  
+command=nmcli device status | gawk 'FNR == 2 {printf "%s %s\n", $3, $4}'
+color=#5fd700
+interval=3
+
+[input_source]
+label=
+interval=1
+
+[volume]
+label=
+interval=1
+separator=true
+command=amixer get Master | egrep -o "[0-9]+%" | sed -n '2 p'
+
+[cpu]
+command=python test.py
+label=CPU:
+interval=10
+separator=true
+
+[temperature]
+command=T=$(cat /sys/class/thermal/thermal_zone0/temp); echo $(( $T / 1000 ))°C
+label=Int.Temp: 
+interval=10
+separator=true
+
+[battery]
+command=echo $(upower -i $(upower -e | grep BAT) | grep --color=never -E percentage|xargs|cut -d' ' -f2|sed s/%//)%
+label=
+interval=1
+separator=true
+
+[time]
+command= date '+%H:%M:%S'
+interval=2
+separator=true
+
+[day]
+command= date '+%a %b %e, %Y';[[ -z "${BLOCK_BUTTON}" ]] || gsimplecal &
+interval=2
+separator=true

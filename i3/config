@@ -9,6 +9,9 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# You can also use any non-zero value if you'd like to have a border
+for_window [class=".*"] border pixel 0
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -17,7 +20,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 16
+font pango:DejaVu Sans Mono 10
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -31,6 +34,10 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
+
+# launch web browser
+# bindsym $mod+f open https://www.duckduckgo.com
+
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -54,11 +61,11 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+# Lock screen w/ i3 Lock
+bindsym $mod+Shift+l exec i3lock -e -c 00a5ff -t --image=/home/mike/Downloads/lock_screen.png
+bindsym $mod+Shift+s exec /home/mike/.screenlayout/single_screen.sh
+bindsym $mod+Shift+d exec /home/mike/.screenlayout/default_dual.sh
+
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -76,8 +83,8 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+# bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -96,9 +103,8 @@ bindsym $mod+a focus parent
 set $ws1 "1. Terminal"
 set $ws2 "2. Firefox"
 set $ws3 "3. Editor"
-set $ws4 "4. Ranger"
+set $ws4 "4. Spotify"
 set $ws5 "5. Python"
-set $ws10 "0. Spotify"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -131,6 +137,10 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+# Make the current focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -160,8 +170,51 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command i3blocks
+	position top
+	workspace_buttons no
+	i3bar_command i3bar --transparency
+
+	colors {
+        	background #00000090
+        	statusline #ffffff
+        	separator #666666
+
+        	focused_workspace  #4c7899 #285577 #ffffff
+        	active_workspace   #333333 #5f676a #ffffff
+        	inactive_workspace #333333 #222222 #888888
+        	urgent_workspace   #2f343a #900000 #ffffff
+        	binding_mode       #2f343a #900000 #ffffff
+    }
 }
 
 
-exec ~/.fehbg & compton -b
+bar {
+	status_command i3status
+	mode hide
+	position bottom
+	workspace_buttons yes
+	tray_output primary
+	tray_padding 5
+	i3bar_command i3bar --transparency
+
+	colors {
+        	background #00000080
+        	statusline #ffffff
+        	separator #666666
+
+        	focused_workspace  #4c7899 #285577 #ffffff
+        	active_workspace   #333333 #5f676a #ffffff
+        	inactive_workspace #333333 #222222 #888888
+        	urgent_workspace   #2f343a #900000 #ffffff
+        	binding_mode       #2f343a #900000 #ffffff
+    }
+	
+
+}
+
+#set gaps
+gaps inner 10
+
+exec ~/.fehbg && compton -b --vsync
+exec redshift -l 39.96:-75.17
