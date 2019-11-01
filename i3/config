@@ -62,7 +62,8 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # Lock screen w/ i3 Lock
-bindsym $mod+Shift+l exec i3lock -e -c 00a5ff -t --image=/home/mike/Downloads/lock_screen.png
+bindsym $mod+Shift+l exec i3lock -e --color=0b140b 
+
 bindsym $mod+Shift+s exec /home/mike/.screenlayout/single_screen.sh
 bindsym $mod+Shift+d exec /home/mike/.screenlayout/default_dual.sh
 
@@ -80,7 +81,9 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+shift+f fullscreen toggle
+bindsym $mod+f exec firefox
+
 
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacking
@@ -101,10 +104,26 @@ bindsym $mod+a focus parent
 
 #set names of workspaces
 set $ws1 "1. Terminal"
-set $ws2 "2. Firefox"
+set $ws2 "2. Terminal_2"
 set $ws3 "3. Editor"
 set $ws4 "4. Spotify"
 set $ws5 "5. Python"
+set $ws6 "6. Firefox"
+set $ws7 "7. Other"
+set $ws8 "8. Other"
+set $ws9 "9. Other"
+set $ws0 "0. TBD"
+
+set $primary "eDP1"
+set $secondary "DP2"
+
+# set workspaces to monitor
+workspace $ws1 output $primary
+workspace $ws2 output $primary
+workspace $ws3 output $primary
+workspace $ws4 output $primary
+workspace $ws5 output $primary
+
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -112,11 +131,11 @@ bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace $ws10
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws0
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -124,11 +143,11 @@ bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -215,6 +234,12 @@ bar {
 
 #set gaps
 gaps inner 10
+
+# swap caps lock and escape
+exec_always --no-startup-id xmodmap -e "clear lock"
+exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
+exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
+
 
 exec ~/.fehbg && compton -b --vsync
 exec redshift -l 39.96:-75.17
