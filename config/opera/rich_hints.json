@@ -1,0 +1,1365 @@
+// os+f5oV5X9bb1PSpxNmDZDFerUESkqQqxeKnMnGdUHl6q67a6y6UUmKCiWUsT3cw8a+5iVfHPmay6hJjO7N83dXlCobWDSCOr4MovuxdHcJTPWEMtXPc1G21jMUJ/v5wrW/emoo7nejEOAGtagPEoU3I2xs+G0ULXz3t1bmCDMwlemgNVcFcpmiQxygMjAY5dl5qJkkq5Fr2MGRuFPRzNV5wpnq0tlZe7pQXRfMzj8BJzrfY2N30keY31bOWS9mnMe8yGu+piqkEybtnudkr1wjgnW+yU7ISR5mIXAYgnAqRMS0QVMZkQHXqOnCzxAYJ6yrJ8TVeld/urM5PV/uF5w==
+{
+  "hints": [
+    {
+      "id": "0001_v7_6_RU",
+      "params": {
+        "default": {
+          "integrity": "sha256-PnH0Hj5xVkRwnEYnsfFtQZEx023KFg6JK/rcISSSlew=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0001_v18_2_fix/search_popup_RU_yandex.html"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND language = 'ru' AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 0 AND ab_test_group_allegiance < 2375",
+      "trigger": {
+        "condition": "number_of_times_already_shown < 3 AND default_search_engine = 'yandex' AND time_since_last_shown >= 7 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "yandex_organic_search"
+      }
+    },
+    {
+      "id": "0001_v7_ref_RU",
+      "params": {
+        "default": {
+          "integrity": "sha256-bq1T8yrRjVy6s6bU2LPfashW3XkcZ20+EWDq9QyY4N0=",
+          "url": "https://get.geo.opera.com/.private/assistserv/phony/phony_v3.html"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND language = 'ru' AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 2375 AND ab_test_group_allegiance < 2500",
+      "trigger": {
+        "condition": "number_of_times_already_shown < 3 AND default_search_engine = 'yandex' AND time_since_last_shown >= 7 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "yandex_organic_search"
+      }
+    },
+    {
+      "id": "0001_v26_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-v2nxJKYRomooCmzQVfaeSV1GPCPR0POWtIFeRK7luvo=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0001_v18_2_fix/search_popup.html?sub_id=0001_v26_1_5"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 0 AND ab_test_group_allegiance < 1666",
+      "trigger": {
+        "condition": "number_of_times_already_shown < 3 AND default_search_engine = 'google' AND time_since_last_shown >= 7 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "google_organic_search"
+      }
+    },
+    {
+      "id": "0001_v26_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-e6f6Mefhr1WF77K1MKpMUldXkZ3w4NFXFdCOuDVSHa4=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0001_v26_1/index.html?sub_id=0001_v26_1_1"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 1666 AND ab_test_group_allegiance < 3333",
+      "trigger": {
+        "condition": "number_of_times_already_shown < 3 AND default_search_engine = 'google' AND dont_show_again = 0 AND time_since_last_shown >= 7 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "google_organic_search"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0001_v26_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-88LUpH61W/gma/b0rog9qPIA3b13aPLLZEbD4/1cpm8=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0001_v26_2/index.html?sub_id=0001_v26_1_2"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 3333 AND ab_test_group_allegiance < 5000",
+      "trigger": {
+        "condition": "number_of_times_already_shown < 3 AND default_search_engine = 'google' AND dont_show_again = 0 AND time_since_last_shown >= 7 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "google_organic_search"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0001_v26_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-mKPclCZ8cMb589Gq3OUe4S6gVXbnSYJaH6Qfdnzhsh8=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0001_v26_3/index.html?sub_id=0001_v26_1_3"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 5000 AND ab_test_group_allegiance < 6666",
+      "trigger": {
+        "condition": "number_of_times_already_shown < 3 AND default_search_engine = 'google' AND dont_show_again = 0 AND time_since_last_shown >= 7 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "google_organic_search"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0001_v26_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-dmFydjyoAR/SKclo4Dt4ywhkai7ga1/d2F1pVl89kPU=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0001_v26_4/index.html?sub_id=0001_v26_1_4"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 6666 AND ab_test_group_allegiance < 8333",
+      "trigger": {
+        "condition": "number_of_times_already_shown < 3 AND default_search_engine = 'google' AND dont_show_again = 0 AND time_since_last_shown >= 7 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "google_organic_search"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0001_v26_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-bq1T8yrRjVy6s6bU2LPfashW3XkcZ20+EWDq9QyY4N0=",
+          "url": "https://get.geo.opera.com/.private/assistserv/phony/phony_v3.html?sub_id=0001_v26_1_ref"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 8333 AND ab_test_group_allegiance < 10000",
+      "trigger": {
+        "condition": "number_of_times_already_shown < 3 AND default_search_engine = 'google' AND time_since_last_shown >= 7 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "google_organic_search"
+      }
+    },
+    {
+      "id": "0001_v23_3",
+      "params": {
+        "default": {
+          "integrity": "sha256-clVOvfJvZsYx8cy78Ucvucn/sXmXCVv+Irqm5NqbZdw=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0001_v24/R4C2.html"
+        }
+      },
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND language = 'ru' AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 0 AND ab_test_group_allegiance < 4750",
+      "trigger": {
+        "condition": "default_search_engine = 'google' AND number_of_skips < 3 AND ((time_since_last_shown >= 7 * 24 AND last_close_type = 1) OR (last_close_type = 0)) AND number_of_times_already_shown < 5",
+        "event": "navigation_to_yandex_service"
+      },
+      "variables": {
+        "last_close_type": {
+          "default": 0,
+          "type": "int"
+        },
+        "number_of_skips": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0001_v23_10",
+      "params": {
+        "default": {
+          "integrity": "sha256-clVOvfJvZsYx8cy78Ucvucn/sXmXCVv+Irqm5NqbZdw=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0001_v24/R4C2.html"
+        }
+      },
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND language = 'ru' AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 4750 AND ab_test_group_allegiance < 9500",
+      "trigger": {
+        "condition": "default_search_engine = 'google' AND number_of_skips < 3 AND ((time_since_last_shown >= 1 * 24 AND last_close_type = 1) OR (last_close_type = 0)) AND number_of_times_already_shown < 5",
+        "event": "navigation_to_yandex_service"
+      },
+      "variables": {
+        "last_close_type": {
+          "default": 0,
+          "type": "int"
+        },
+        "number_of_skips": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0001_v23_ref",
+      "params": {
+        "default": {
+          "integrity": "sha256-bq1T8yrRjVy6s6bU2LPfashW3XkcZ20+EWDq9QyY4N0=",
+          "url": "https://get.geo.opera.com/.private/assistserv/phony/phony_v3.html"
+        }
+      },
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND language = 'ru' AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 9500 AND ab_test_group_allegiance < 10000",
+      "trigger": {
+        "condition": "default_search_engine = 'google' AND number_of_times_already_shown < 5",
+        "event": "navigation_to_yandex_service"
+      }
+    },
+    {
+      "id": "0001_v25_1_EN",
+      "params": {
+        "default": {
+          "integrity": "sha256-v2nxJKYRomooCmzQVfaeSV1GPCPR0POWtIFeRK7luvo=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0001_v18_2_fix/search_popup.html"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 0 AND ab_test_group_allegiance < 50",
+      "trigger": {
+        "condition": "('04ea5e6749c3db01060291e3dff420fb0bbd2a0c' IN chars OR 'c485ae2488b5b387a545bae58eb12aef317e789e' IN chars) AND number_of_times_already_shown < 3 AND default_search_engine = 'google' AND time_since_last_shown >= 1 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_startpage"
+      }
+    },
+    {
+      "id": "0001_v25_ref_EN",
+      "params": {
+        "default": {
+          "integrity": "sha256-bq1T8yrRjVy6s6bU2LPfashW3XkcZ20+EWDq9QyY4N0=",
+          "url": "https://get.geo.opera.com/.private/assistserv/phony/phony_v3.html"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 50 AND ab_test_group_allegiance < 100",
+      "trigger": {
+        "condition": "('04ea5e6749c3db01060291e3dff420fb0bbd2a0c' IN chars OR 'c485ae2488b5b387a545bae58eb12aef317e789e' IN chars) AND number_of_times_already_shown < 3 AND default_search_engine = 'google' AND time_since_last_shown >= 1 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_startpage"
+      }
+    },
+    {
+      "id": "0002_v1_1_EN",
+      "params": {
+        "default": {
+          "integrity": "sha256-/7E6mzRD/el/MEoYXxPyST26AjSaLLMibH5xzw7tJFw=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0002_v1_fix2/0002_v1_fix2_3_3.html?bg_cursor=1&sub_id=0002_v9_2"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major = 64 AND app.version.build = 3417 AND app.version.patch >= 92) OR app.version.major >= 65) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 0 AND ab_test_group_allegiance < 9500",
+      "trigger": {
+        "condition": "(!('115c50fa8d59f99ea14a4de68b51c1b28a48665f' IN chars) AND !('2b1a6efc318c43df2480e1196cb2782e04a96d55' IN chars) AND !('d444533815c9f26dd1e73c92f935bb627bc37967' IN chars) AND !('28ee13332c922442c10eccf0cc62481c27af9491' IN chars)) AND dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 7 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_twitch"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0002_v1_ref_EN",
+      "params": {
+        "default": {
+          "integrity": "sha256-bq1T8yrRjVy6s6bU2LPfashW3XkcZ20+EWDq9QyY4N0=",
+          "url": "https://get.geo.opera.com/.private/assistserv/phony/phony_v3.html?sub_id=0002_v9_ref"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major = 64 AND app.version.build = 3417 AND app.version.patch >= 92) OR app.version.major >= 65) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 9500 AND ab_test_group_allegiance < 10000",
+      "trigger": {
+        "condition": "(!('115c50fa8d59f99ea14a4de68b51c1b28a48665f' IN chars) AND !('2b1a6efc318c43df2480e1196cb2782e04a96d55' IN chars) AND !('d444533815c9f26dd1e73c92f935bb627bc37967' IN chars) AND !('28ee13332c922442c10eccf0cc62481c27af9491' IN chars)) AND number_of_times_already_shown < 3 AND time_since_last_shown >= 7 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_twitch"
+      }
+    },
+    {
+      "id": "0002_v2_1_EN",
+      "params": {
+        "default": {
+          "integrity": "sha256-/7E6mzRD/el/MEoYXxPyST26AjSaLLMibH5xzw7tJFw=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0002_v1_fix2/0002_v1_fix2_3_3.html?bg_cursor=1&sub_id=0002_v2_3"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major = 64 AND app.version.build = 3417 AND app.version.patch >= 92) OR app.version.major >= 65) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 0 AND ab_test_group_allegiance < 9500",
+      "trigger": {
+        "condition": "(!('115c50fa8d59f99ea14a4de68b51c1b28a48665f' IN chars) AND !('2b1a6efc318c43df2480e1196cb2782e04a96d55' IN chars) AND !('d444533815c9f26dd1e73c92f935bb627bc37967' IN chars) AND !('28ee13332c922442c10eccf0cc62481c27af9491' IN chars)) AND dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 7 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_mixer"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0002_v2_ref_EN",
+      "params": {
+        "default": {
+          "integrity": "sha256-bq1T8yrRjVy6s6bU2LPfashW3XkcZ20+EWDq9QyY4N0=",
+          "url": "https://get.geo.opera.com/.private/assistserv/phony/phony_v3.html?sub_id=0002_v2_ref"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major = 64 AND app.version.build = 3417 AND app.version.patch >= 92) OR app.version.major >= 65) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 9500 AND ab_test_group_allegiance < 10000",
+      "trigger": {
+        "condition": "(!('115c50fa8d59f99ea14a4de68b51c1b28a48665f' IN chars) AND !('2b1a6efc318c43df2480e1196cb2782e04a96d55' IN chars) AND !('d444533815c9f26dd1e73c92f935bb627bc37967' IN chars) AND !('28ee13332c922442c10eccf0cc62481c27af9491' IN chars)) AND number_of_times_already_shown < 3 AND time_since_last_shown >= 7 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_mixer"
+      }
+    },
+    {
+      "id": "0002_v5_1_EN",
+      "params": {
+        "default": {
+          "integrity": "sha256-/7E6mzRD/el/MEoYXxPyST26AjSaLLMibH5xzw7tJFw=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0002_v1_fix2/0002_v1_fix2_3_3.html?bg_cursor=1&sub_id=0002_v5_2"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major = 64 AND app.version.build = 3417 AND app.version.patch >= 92) OR app.version.major >= 65) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 0 AND ab_test_group_allegiance < 9500",
+      "trigger": {
+        "condition": "(!('115c50fa8d59f99ea14a4de68b51c1b28a48665f' IN chars) AND !('2b1a6efc318c43df2480e1196cb2782e04a96d55' IN chars) AND !('d444533815c9f26dd1e73c92f935bb627bc37967' IN chars) AND !('28ee13332c922442c10eccf0cc62481c27af9491' IN chars)) AND dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 7 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_discord"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0002_v5_ref_EN",
+      "params": {
+        "default": {
+          "integrity": "sha256-bq1T8yrRjVy6s6bU2LPfashW3XkcZ20+EWDq9QyY4N0=",
+          "url": "https://get.geo.opera.com/.private/assistserv/phony/phony_v3.html?sub_id=0002_v5_ref"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major = 64 AND app.version.build = 3417 AND app.version.patch >= 92) OR app.version.major >= 65) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 9500 AND ab_test_group_allegiance < 10000",
+      "trigger": {
+        "condition": "(!('115c50fa8d59f99ea14a4de68b51c1b28a48665f' IN chars) AND !('2b1a6efc318c43df2480e1196cb2782e04a96d55' IN chars) AND !('d444533815c9f26dd1e73c92f935bb627bc37967' IN chars) AND !('28ee13332c922442c10eccf0cc62481c27af9491' IN chars)) AND number_of_times_already_shown < 3 AND time_since_last_shown >= 7 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_discord"
+      }
+    },
+    {
+      "id": "0002_v6_1_EN",
+      "params": {
+        "default": {
+          "integrity": "sha256-/7E6mzRD/el/MEoYXxPyST26AjSaLLMibH5xzw7tJFw=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0002_v1_fix2/0002_v1_fix2_3_3.html?bg_cursor=1&sub_id=0002_v6_2"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major = 64 AND app.version.build = 3417 AND app.version.patch >= 92) OR app.version.major >= 65) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 0 AND ab_test_group_allegiance < 9500",
+      "trigger": {
+        "condition": "(!('115c50fa8d59f99ea14a4de68b51c1b28a48665f' IN chars) AND !('2b1a6efc318c43df2480e1196cb2782e04a96d55' IN chars) AND !('d444533815c9f26dd1e73c92f935bb627bc37967' IN chars) AND !('28ee13332c922442c10eccf0cc62481c27af9491' IN chars)) AND dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 7 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_gaming_sites"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0002_v6_ref_EN",
+      "params": {
+        "default": {
+          "integrity": "sha256-bq1T8yrRjVy6s6bU2LPfashW3XkcZ20+EWDq9QyY4N0=",
+          "url": "https://get.geo.opera.com/.private/assistserv/phony/phony_v3.html?sub_id=0002_v6_ref"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major = 64 AND app.version.build = 3417 AND app.version.patch >= 92) OR app.version.major >= 65) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 9500 AND ab_test_group_allegiance < 10000",
+      "trigger": {
+        "condition": "(!('115c50fa8d59f99ea14a4de68b51c1b28a48665f' IN chars) AND !('2b1a6efc318c43df2480e1196cb2782e04a96d55' IN chars) AND !('d444533815c9f26dd1e73c92f935bb627bc37967' IN chars) AND !('28ee13332c922442c10eccf0cc62481c27af9491' IN chars)) AND number_of_times_already_shown < 3 AND time_since_last_shown >= 7 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_gaming_sites"
+      }
+    },
+    {
+      "id": "0002_v8_1_EN",
+      "params": {
+        "default": {
+          "integrity": "sha256-/7E6mzRD/el/MEoYXxPyST26AjSaLLMibH5xzw7tJFw=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0002_v1_fix2/0002_v1_fix2_3_3.html?bg_cursor=1&sub_id=0002_v8_5"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major = 64 AND app.version.build = 3417 AND app.version.patch >= 92) OR app.version.major >= 65) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 0 AND ab_test_group_allegiance < 9500",
+      "trigger": {
+        "condition": "(!('115c50fa8d59f99ea14a4de68b51c1b28a48665f' IN chars) AND !('2b1a6efc318c43df2480e1196cb2782e04a96d55' IN chars) AND !('d444533815c9f26dd1e73c92f935bb627bc37967' IN chars) AND !('28ee13332c922442c10eccf0cc62481c27af9491' IN chars) AND ('723621b996409a16813bc7d47231cfcfc92113e1' IN chars)) AND dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 7 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_startpage"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0002_v8_ref_EN",
+      "params": {
+        "default": {
+          "integrity": "sha256-bq1T8yrRjVy6s6bU2LPfashW3XkcZ20+EWDq9QyY4N0=",
+          "url": "https://get.geo.opera.com/.private/assistserv/phony/phony_v3.html?sub_id=0002_v8_ref"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major = 64 AND app.version.build = 3417 AND app.version.patch >= 92) OR app.version.major >= 65) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 9500 AND ab_test_group_allegiance < 10000",
+      "trigger": {
+        "condition": "(!('115c50fa8d59f99ea14a4de68b51c1b28a48665f' IN chars) AND !('2b1a6efc318c43df2480e1196cb2782e04a96d55' IN chars) AND !('d444533815c9f26dd1e73c92f935bb627bc37967' IN chars) AND !('28ee13332c922442c10eccf0cc62481c27af9491' IN chars) AND ('723621b996409a16813bc7d47231cfcfc92113e1' IN chars)) AND number_of_times_already_shown < 3 AND time_since_last_shown >= 7 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_startpage"
+      }
+    },
+    {
+      "id": "0002_v10_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-/7E6mzRD/el/MEoYXxPyST26AjSaLLMibH5xzw7tJFw=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0002_v1_fix2/0002_v1_fix2_3_3.html?bg_cursor=1&sub_id=0002_v10_1"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major = 64 AND app.version.build = 3417 AND app.version.patch >= 92) OR app.version.major >= 65) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 0 AND ab_test_group_allegiance < 500",
+      "trigger": {
+        "condition": "(!('115c50fa8d59f99ea14a4de68b51c1b28a48665f' IN chars) AND !('2b1a6efc318c43df2480e1196cb2782e04a96d55' IN chars) AND !('d444533815c9f26dd1e73c92f935bb627bc37967' IN chars) AND !('28ee13332c922442c10eccf0cc62481c27af9491' IN chars) AND ('1ab65c42d80496dcd575c2c95d9fba608c41c4bc' IN chars) AND (('04ea5e6749c3db01060291e3dff420fb0bbd2a0c' IN chars) OR ('c485ae2488b5b387a545bae58eb12aef317e789e' IN chars))) AND dont_show_again = 0 AND number_of_times_already_shown < 5 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_startpage"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0002_v10_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-bq1T8yrRjVy6s6bU2LPfashW3XkcZ20+EWDq9QyY4N0=",
+          "url": "https://get.geo.opera.com/.private/assistserv/phony/phony_v3.html?sub_id=0002_v10_1_ref"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major = 64 AND app.version.build = 3417 AND app.version.patch >= 92) OR app.version.major >= 65) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 500 AND ab_test_group_allegiance < 1000",
+      "trigger": {
+        "condition": "(!('115c50fa8d59f99ea14a4de68b51c1b28a48665f' IN chars) AND !('2b1a6efc318c43df2480e1196cb2782e04a96d55' IN chars) AND !('d444533815c9f26dd1e73c92f935bb627bc37967' IN chars) AND !('28ee13332c922442c10eccf0cc62481c27af9491' IN chars) AND ('1ab65c42d80496dcd575c2c95d9fba608c41c4bc' IN chars) AND (('04ea5e6749c3db01060291e3dff420fb0bbd2a0c' IN chars) OR ('c485ae2488b5b387a545bae58eb12aef317e789e' IN chars))) AND number_of_times_already_shown < 5 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_startpage"
+      }
+    },
+    {
+      "id": "0002_v10_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-/7E6mzRD/el/MEoYXxPyST26AjSaLLMibH5xzw7tJFw=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0002_v1_fix2/0002_v1_fix2_3_3.html?bg_cursor=1&sub_id=0002_v10_2"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major = 64 AND app.version.build = 3417 AND app.version.patch >= 92) OR app.version.major >= 65) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 1000 AND ab_test_group_allegiance < 1500",
+      "trigger": {
+        "condition": "(!('115c50fa8d59f99ea14a4de68b51c1b28a48665f' IN chars) AND !('2b1a6efc318c43df2480e1196cb2782e04a96d55' IN chars) AND !('d444533815c9f26dd1e73c92f935bb627bc37967' IN chars) AND !('28ee13332c922442c10eccf0cc62481c27af9491' IN chars) AND ('1ab65c42d80496dcd575c2c95d9fba608c41c4bc' IN chars) AND (('64336fb81a04836eb8108d24fbca3aa3682db0a5' IN chars) OR ('68add370ba02896ef1ad3f4a02816ef157019a46' IN chars))) AND dont_show_again = 0 AND number_of_times_already_shown < 5 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_startpage"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0002_v10_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-bq1T8yrRjVy6s6bU2LPfashW3XkcZ20+EWDq9QyY4N0=",
+          "url": "https://get.geo.opera.com/.private/assistserv/phony/phony_v3.html?sub_id=0002_v10_2_ref"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major = 64 AND app.version.build = 3417 AND app.version.patch >= 92) OR app.version.major >= 65) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 1500 AND ab_test_group_allegiance < 2000",
+      "trigger": {
+        "condition": "(!('115c50fa8d59f99ea14a4de68b51c1b28a48665f' IN chars) AND !('2b1a6efc318c43df2480e1196cb2782e04a96d55' IN chars) AND !('d444533815c9f26dd1e73c92f935bb627bc37967' IN chars) AND !('28ee13332c922442c10eccf0cc62481c27af9491' IN chars) AND ('1ab65c42d80496dcd575c2c95d9fba608c41c4bc' IN chars) AND (('64336fb81a04836eb8108d24fbca3aa3682db0a5' IN chars) OR ('68add370ba02896ef1ad3f4a02816ef157019a46' IN chars))) AND number_of_times_already_shown < 5 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_startpage"
+      }
+    },
+    {
+      "id": "0002_v10_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-/7E6mzRD/el/MEoYXxPyST26AjSaLLMibH5xzw7tJFw=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0002_v1_fix2/0002_v1_fix2_3_3.html?bg_cursor=1&sub_id=0002_v10_3"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major = 64 AND app.version.build = 3417 AND app.version.patch >= 92) OR app.version.major >= 65) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 2000 AND ab_test_group_allegiance < 2500",
+      "trigger": {
+        "condition": "(!('115c50fa8d59f99ea14a4de68b51c1b28a48665f' IN chars) AND !('2b1a6efc318c43df2480e1196cb2782e04a96d55' IN chars) AND !('d444533815c9f26dd1e73c92f935bb627bc37967' IN chars) AND !('28ee13332c922442c10eccf0cc62481c27af9491' IN chars) AND ('1ab65c42d80496dcd575c2c95d9fba608c41c4bc' IN chars) AND (('64336fb81a04836eb8108d24fbca3aa3682db0a5' IN chars) OR ('68add370ba02896ef1ad3f4a02816ef157019a46' IN chars) OR ('04ea5e6749c3db01060291e3dff420fb0bbd2a0c' IN chars) OR ('c485ae2488b5b387a545bae58eb12aef317e789e' IN chars))) AND dont_show_again = 0 AND number_of_times_already_shown < 5 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_startpage"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0002_v10_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-bq1T8yrRjVy6s6bU2LPfashW3XkcZ20+EWDq9QyY4N0=",
+          "url": "https://get.geo.opera.com/.private/assistserv/phony/phony_v3.html?sub_id=0002_v10_3_ref"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major = 64 AND app.version.build = 3417 AND app.version.patch >= 92) OR app.version.major >= 65) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 2500 AND ab_test_group_allegiance < 3000",
+      "trigger": {
+        "condition": "(!('115c50fa8d59f99ea14a4de68b51c1b28a48665f' IN chars) AND !('2b1a6efc318c43df2480e1196cb2782e04a96d55' IN chars) AND !('d444533815c9f26dd1e73c92f935bb627bc37967' IN chars) AND !('28ee13332c922442c10eccf0cc62481c27af9491' IN chars) AND ('1ab65c42d80496dcd575c2c95d9fba608c41c4bc' IN chars) AND (('64336fb81a04836eb8108d24fbca3aa3682db0a5' IN chars) OR ('68add370ba02896ef1ad3f4a02816ef157019a46' IN chars) OR ('04ea5e6749c3db01060291e3dff420fb0bbd2a0c' IN chars) OR ('c485ae2488b5b387a545bae58eb12aef317e789e' IN chars)))  AND number_of_times_already_shown < 5 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_startpage"
+      }
+    },
+    {
+      "id": "0002_v11_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-/7E6mzRD/el/MEoYXxPyST26AjSaLLMibH5xzw7tJFw=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0002_v1_fix2/0002_v1_fix2_3_3.html?bg_cursor=1&sub_id=0002_v11_1"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major = 64 AND app.version.build = 3417 AND app.version.patch >= 92) OR app.version.major >= 65) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 0 AND ab_test_group_allegiance < 1000",
+      "trigger": {
+        "condition": "(!('115c50fa8d59f99ea14a4de68b51c1b28a48665f' IN chars) AND !('2b1a6efc318c43df2480e1196cb2782e04a96d55' IN chars) AND !('d444533815c9f26dd1e73c92f935bb627bc37967' IN chars) AND !('28ee13332c922442c10eccf0cc62481c27af9491' IN chars) AND ('723621b996409a16813bc7d47231cfcfc92113e1' IN chars)) AND dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 7 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_gaming_sites_yt_pewdiepie"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0002_v11_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-bq1T8yrRjVy6s6bU2LPfashW3XkcZ20+EWDq9QyY4N0=",
+          "url": "https://get.geo.opera.com/.private/assistserv/phony/phony_v3.html?sub_id=0002_v11_1_ref"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major = 64 AND app.version.build = 3417 AND app.version.patch >= 92) OR app.version.major >= 65) AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 1000 AND ab_test_group_allegiance < 2000",
+      "trigger": {
+        "condition": "(!('115c50fa8d59f99ea14a4de68b51c1b28a48665f' IN chars) AND !('2b1a6efc318c43df2480e1196cb2782e04a96d55' IN chars) AND !('d444533815c9f26dd1e73c92f935bb627bc37967' IN chars) AND !('28ee13332c922442c10eccf0cc62481c27af9491' IN chars) AND ('723621b996409a16813bc7d47231cfcfc92113e1' IN chars)) AND number_of_times_already_shown < 3 AND time_since_last_shown >= 7 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_gaming_sites_yt_pewdiepie"
+      }
+    },
+    {
+      "id": "0005_v1_3",
+      "params": {
+        "default": {
+          "integrity": "sha256-tq/dvKEYkCm0nuzrVkJhd4zjZVY85ed2ljIrS6SkiG4=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0005_v1/index_v3.html?copy=2&design=2&sub_id=0005_v9_1"
+        }
+      },
+      "priority": 52,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND language = 'de' AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 0 AND ab_test_group_allegiance < 10000",
+      "trigger": {
+        "condition": "dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_car_insurance_website"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0006_v1_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-UDltgMzqJl/mhakdajIzf3iyLuDYDsi8rR7XV3vrhdU=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0006_v1/index.html?copy=1&design=1&sub_id=0006_v1_1"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND language = 'de' AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 0 AND ab_test_group_allegiance < 1666",
+      "trigger": {
+        "condition": "dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_electricity_project_1_energy_supplier_sites"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0006_v1_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-UDltgMzqJl/mhakdajIzf3iyLuDYDsi8rR7XV3vrhdU=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0006_v1/index.html?copy=1&design=1&sub_id=0006_v3_1"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND language = 'de' AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 1666 AND ab_test_group_allegiance < 2500",
+      "trigger": {
+        "condition": "dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_electricity_project_2_news_sites"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0006_v1_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-UDltgMzqJl/mhakdajIzf3iyLuDYDsi8rR7XV3vrhdU=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0006_v1/index.html?copy=1&design=1&bg_cursor=1&sub_id=0006_v3_2"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND language = 'de' AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 2500 AND ab_test_group_allegiance < 3333",
+      "trigger": {
+        "condition": "dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_electricity_project_2_news_sites"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0006_v1_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-UDltgMzqJl/mhakdajIzf3iyLuDYDsi8rR7XV3vrhdU=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0006_v1/index.html?copy=1&design=1&sub_id=0006_v1_3"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND language = 'de' AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 3333 AND ab_test_group_allegiance < 5000",
+      "trigger": {
+        "condition": "dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_electricity_project_3_comparison_sites"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0006_v1_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-UDltgMzqJl/mhakdajIzf3iyLuDYDsi8rR7XV3vrhdU=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0006_v1/index.html?copy=1&design=1&sub_id=0006_v2_9"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND language = 'de' AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 5000 AND ab_test_group_allegiance < 5555",
+      "trigger": {
+        "condition": "dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_electricity_project_4_real_estate_search_engine_sites"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0006_v1_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-UDltgMzqJl/mhakdajIzf3iyLuDYDsi8rR7XV3vrhdU=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0006_v1/index.html?copy=1&design=2&sub_id=0006_v2_10"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND language = 'de' AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 5555 AND ab_test_group_allegiance < 6110",
+      "trigger": {
+        "condition": "dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_electricity_project_4_real_estate_search_engine_sites"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0006_v1_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-UDltgMzqJl/mhakdajIzf3iyLuDYDsi8rR7XV3vrhdU=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0006_v1/index.html?copy=1&design=3&sub_id=0006_v2_11"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND language = 'de' AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 6110 AND ab_test_group_allegiance < 6666",
+      "trigger": {
+        "condition": "dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_electricity_project_4_real_estate_search_engine_sites"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0006_v1_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-UDltgMzqJl/mhakdajIzf3iyLuDYDsi8rR7XV3vrhdU=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0006_v1/index.html?copy=1&design=1&sub_id=0006_v1_5"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND language = 'de' AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 6666 AND ab_test_group_allegiance < 8333",
+      "trigger": {
+        "condition": "dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_electricity_project_5_personal_finance_sites"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0006_v1_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-UDltgMzqJl/mhakdajIzf3iyLuDYDsi8rR7XV3vrhdU=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0006_v1/index.html?copy=1&design=1&sub_id=0006_v2_7"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND language = 'de' AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 8333 AND ab_test_group_allegiance < 9166",
+      "trigger": {
+        "condition": "dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_electricity_project_6_house_building_sites"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0006_v1_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-UDltgMzqJl/mhakdajIzf3iyLuDYDsi8rR7XV3vrhdU=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0006_v1/index.html?copy=2&design=1&sub_id=0006_v2_8"
+        }
+      },
+      "priority": 50,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND language = 'de' AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 9166 AND ab_test_group_allegiance < 10000",
+      "trigger": {
+        "condition": "dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_electricity_project_6_house_building_sites"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0007_v1_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-Vl+XxZKlxYkCCgJ9U+mBCmG7XaIvlPJtuLTS9GVbTmM=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0007_v1/index.html?copy=1&design=1&sub_id=0007_v1_2"
+        }
+      },
+      "priority": 49,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND language = 'de' AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 1666 AND ab_test_group_allegiance < 3333",
+      "trigger": {
+        "condition": "dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_electricity_project_2_news_sites"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0008_v1_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-TJAsvNJ5qnvfSFEOxDxvP3LXHZSyBIvG8ZEFaibqnhE=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0008_v1/index.html?copy=1&design=1&sub_id=0008_v1_1"
+        }
+      },
+      "priority": 49,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND language = 'de' AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 0 AND ab_test_group_allegiance < 10000",
+      "trigger": {
+        "condition": "dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_dsl_project_3_comparison_sites"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0008_v1_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-TJAsvNJ5qnvfSFEOxDxvP3LXHZSyBIvG8ZEFaibqnhE=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0008_v1/index.html?copy=1&design=1&sub_id=0008_v1_2"
+        }
+      },
+      "priority": 49,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND language = 'de' AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 0 AND ab_test_group_allegiance < 10000",
+      "trigger": {
+        "condition": "dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_dsl_project_1_supplier_sites"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    },
+    {
+      "id": "0009_v1_1",
+      "params": {
+        "default": {
+          "integrity": "sha256-EGwYi1qMFs3LoGRfiH7rqhhoOXja376lSHwZUzzmsNA=",
+          "url": "https://get.geo.opera.com/.private/assistserv/0009_v1/index.html?copy=1&design=1&sub_id=0009_v1_1"
+        }
+      },
+      "priority": 49,
+      "target": "((app.version.major >= 63 AND app.version.patch >= 43) OR app.version.major >= 64) AND language = 'de' AND os.type = 'win' AND transparency_supported = 1 AND ab_test_group_allegiance >= 0 AND ab_test_group_allegiance < 10000",
+      "trigger": {
+        "condition": "dont_show_again = 0 AND number_of_times_already_shown < 3 AND time_since_last_shown >= 3 * 24 AND most_recent.time_since_last_shown >= 1 * 24",
+        "event": "navigation_to_car_rental_project_3_comparison_sites"
+      },
+      "variables": {
+        "dont_show_again": {
+          "default": 0,
+          "type": "int"
+        }
+      }
+    }
+  ],
+  "url_load_events": {
+    "google_attributed_search": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "AddressBar",
+        "ContextMenu",
+        "StartPage",
+        "WebPage"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": true,
+        "matches_any": [
+          {
+            "getParamsContain": {
+              "client": [
+                "opera"
+              ]
+            },
+            "urlMatches": "http(s)?:\\/\\/www\\.google\\.(.{2,3}|.{2,3}\\..{2})/search.*"
+          }
+        ]
+      }
+    },
+    "google_organic_search": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "AddressBar",
+        "ContextMenu",
+        "StartPage",
+        "WebPage"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": true,
+        "matches_any": [
+          {
+            "urlMatches": "http(s)?:\\/\\/www\\.google\\.(.{2,3}|.{2,3}\\..{2})/search.*"
+          }
+        ]
+      }
+    },
+    "navigation_to_car_insurance_website": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "AddressBar",
+        "Bookmark",
+        "WebPage",
+        "StartPage",
+        "Redirect"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": true,
+        "matches_any": [
+          {
+            "urlMatches": "http(s)?:\\/(\\/|\\/.*\\.)(?:02-club\\.de|1-camaroclub\\.de|110ht\\.de|124spider-forum\\.de|126bis\\.de|1300ccm\\.de|1600i\\.de|170v\\.de|190sl-club\\.mercedes-benz-clubs\\.com|1er-online\\.de|1erforum\\.de|205gti\\.ch|206cc\\.de|20832\\.com|2cv-citroen\\.de|2cv-club-bs\\.de|2ertalk\\.de|300c-forum\\.de|300sl-club\\.mercedes-benz-clubs\\.com|302615\\.homepagemodules\\.de|319er-club\\.de|3er-club\\.de|406coupe\\.ch|4x4-treff\\.de|500er-fiat\\.de|7-forum\\.com|914freunde\\.de|993c2\\.de|a3-freunde\\.de|a3-quattro\\.de|a4-freunde\\.com|abarth-forum\\.de|abenteuer-allrad\\.de|abt-sportsline\\.de|ac-kettwig\\.de|ac-n\\.de|ac-schnitzer\\.de|accordforum\\.de|ace-online\\.de|acs\\.ch|action-ents-saar\\.de|acv\\.de|adac\\.de|adcuri\\.barmenia24\\.de|adler-trumpf\\.de|admiraldirekt\\.de|adventure-offroad\\.de|agentur-hoffmann\\.de|ai-motors\\.de|alexone\\.de|alfa-classic-car-club\\.de|alfa-club\\.de|alfa-power\\.de|alfa-romeo-club-2000-2600\\.de|alfa-romeo-club\\.ch|alfa-romeo-portal\\.de|alfa-wahnsinn\\.de|alfaclub\\.de|alfaforum\\.de|alfahinzen\\.de|alfantastisch\\.ag\\.vu|alfaromeoclubgera\\.de|alfisti\\.net|allard-classic\\.de|alle-autos-in\\.de|alles-golf\\.de|allianz\\.de|allianzdirect\\.de|allrad-freunde-heidelsheim\\.de|allrad-test\\.de|alpinelab\\.de|alt-opel\\.org|alte-leipziger\\.de|alter-schwede\\.de|altopel-forum\\.de|amazon\\.de\\/auto-tuning-autoteile|amc-olpe\\.de|americar\\.de|amg-owners-club\\.de|amwf\\.ch|andre-citroen-club\\.de|ar-c\\.de|ar-classicparts\\.ch|arboe\\.at|arcd\\.de|asc-bremerhaven\\.de|asian-car-club\\.de|asp-24\\.de|astra-cabrio-forum\\.de|astra-g\\.de|atex-nsr\\.de|audi-100-coupe-s\\.de|audi-classic\\.de|audi-club-international\\.de|audi-gemeinschaft\\.de|audi-speed\\.de|audi100-online\\.de|audi100\\.de|audi100\\.selbst-doku\\.de|audi4ever\\.at|audi80gtgteclub\\.de|audiclub-altensteiner-oberland\\.de|audiclubschweiz\\.ch|audifieber\\.de|auditeam-goettingen\\.de|auditurboforum\\.de|audiv8\\.com|auris-forum\\.de|ausfahrt\\.tv|austroclassic\\.at|auto-clever\\.de|auto-geil\\.de|auto-magazin24\\.de|auto-mobil-forum\\.de|auto-motor-und-sport\\.de|auto-motor\\.at|auto-news\\.de|auto-presse\\.de|auto-reporter\\.net|auto-service\\.de|auto-treff\\.com|auto-tuning-news\\.de|auto-union-veteranen-club\\.de|auto\\.de|auto\\.de\\.msn\\.com|auto\\.infranken\\.de|autoaid\\.de\\/blog|autoampel\\.de|autobild\\.de|autodefekt\\.de|autodelta\\.de|autodienst-scheuss\\.de|autodino\\.de\\/autonews|autoexperience\\.de|autoextrem\\.de|autofilou\\.at|autoflotte\\.de|autogazette\\.de|autogefuehl\\.de|autohaus24\\.de|autohaus\\.de|autohof\\.net|autoholic\\.de|autokarma\\.de|autokennzeichen\\.info|autokiste\\.de|autokult\\.de|automobil-blog\\.de|automobil-magazin\\.de|automobil\\.org|automobilclub-muenchen\\.de|automobile-oldtimer\\.de|automobilwoche\\.de|automuseum\\.volkswagen\\.de|autophilie\\.de|autophorie\\.de|autoplenum\\.de|autorevue\\.at|autoschrauber\\.de|autoscout24\\.de|autoservicepraxis\\.de|autosieger\\.de|autotechnik-forum\\.de|autouncle\\.de|autoversicherung\\.adac\\.de|autowallpaper\\.de|autozeitung\\.de|avca\\.at|avd\\.de|ax-club\\.de|axa\\.de|azlk\\.de|bacigalupo-autoteile\\.de|bamotec\\.de|barchetta-forum\\.de|barchetta-lexikon\\.de|barchetta\\.info|barkas\\.de|barmenia-direkt\\.de|barmenia\\.de|basler\\.de|bavariadirekt\\.de|bayrische-trabant-ifa-freunde\\.de|beanfamily\\.de|beautygeek\\.de|beetlefun\\.de|beetles\\.ch|beetles\\.de|beier-automobiltechnik\\.de|belair-57\\.de|bella_macchina\\.tripod\\.com|berlinetta\\.org|berlingoman\\.de|bgv\\.de|bigblogg\\.com|bild\\.de\\/auto|billigeautoversicherungen\\.de|billigstautos\\.com|bimmertoday\\.de|bitter-club\\.de|blablacar\\.de|black7er\\.com|blog\\.auto-24\\.net|blog\\.autoplenum\\.de|blog\\.daimler\\.de|blog\\.meinauto\\.de|blog\\.mercedes-benz-passion\\.com|bmw-02-club\\.de|bmw-baur-tc-club\\.de|bmw-club-bamberg-ev\\.de|bmw-club-bb\\.de|bmw-club-marl\\.de|bmw-club-oberpfalz\\.de|bmw-club-peine\\.de|bmw-club-scorpion-dresden\\.de|bmw-club-zuerichsee\\.ch|bmw-clubs-europa\\.org|bmw-driver\\.de|bmw-drivers\\.de|bmw-e23-club\\.de|bmw-e3-club\\.de|bmw-forum\\.eu|bmw-freaks-prignitz\\.de|bmw-power\\.ch|bmw-power\\.de|bmw-syndikat\\.de|bmw-team-ohv\\.de|bmw-v8-club\\.de|bmw-veteranenclub\\.at|bmw-veteranenclub\\.de|bmw-z1\\.de|bmw6er-club\\.com|bmw\\.de|bmw\\.houbi\\.ch|bmwe23\\.de|bmwz1\\.de|borgward-ig\\.de|borgward\\.org|boxermotor\\.com|braun-oliver\\.de|bremer-volvo-club\\.de|bremsen-heinz\\.de|breyton\\.com|brezelfenstervereinigung\\.de|brits-n-pieces\\.com|brokendreams\\.de|buckelvolvo\\.de|bugatti\\.com|buggy-club\\.de|bugnet\\.de|buickclub\\.de|bulli\\.org|bulliclub\\.de|bullikartei\\.de|bullock-style\\.de|bus-community\\.eu|buschtaxi\\.org|bxig\\.net|c2-community\\.de|c4forum\\.de|caar-ev\\.de|cadillac-club\\.de|cadillacclub\\.ch|cadillacv8\\.de|calibra-team\\.de|camping-cars-caravans\\.de|capri-club-deutschland\\.de|capri-club-friesland\\.de|capriclubcolonia\\.de|capriclubfreedrivers\\.ch|caprifreundekoblenz\\.de|caprihome\\.de|capripost\\.de|captur-forum\\.de|car-elite\\.com|car-trim\\.de|car-vs-car\\.de|carbuilt\\.de|cargo-blog\\.com|carpassion\\.com|cars-a-z\\.net|carsablanca\\.de|carsfromitaly\\.info|carsfromusa\\.de|ccarshow\\.net|ccfreunde\\.de|ccrr\\.de|cctf\\.de|cento-world\\.de|chemnitzer-oldtimerclub\\.de|chevys\\.de|chip-tuning\\.de|chromjuwelen\\.com|citroen-2cv\\.de|citroen-club\\.ch|citroen-presse\\.com|citroen\\.at|citroen\\.de|citroends\\.net|citroenfahrer\\.de|citroensmclub\\.de|classic-opel-forum\\.de|classicdriver\\.com|clio-v6\\.info|cliors\\.de|cliowelt\\.de|clk-club\\.de|cls-forum\\.de|club-klassischer-alfa\\.de|clubsporttrophy\\.de|cobra-ig\\.de|commodore-b\\.de|concordia\\.de|condor-versicherungen\\.de|confidon\\.de|continentale\\.de|cool-runnings-kammeltal\\.de|corrado-club-germany\\.de|corsa-tigra-connexion\\.de|corvette-club-hamburg\\.de|corvette-freunde-kurpfalz\\.de|cosmosdirekt\\.de|cosworth\\.de|cougarprojekt\\.de|cougars\\.praxisport\\.de|covc\\.at|coyote-tuning\\.ch|crazycarteam\\.beepworld\\.de|crxclub\\.de|crxtom\\.de|cuore-sportivo\\.com|cuoresvizzera\\.ch|cvc-club\\.de|cx-basis\\.de|da-direkt\\.de|dacabrio\\.de|dacia\\.de|dafclub\\.de|daihatsu-forum\\.de|das-oldtimer-forum\\.de|dasfell\\.de|daslebenistmeinponyhof\\.digital-dictators\\.de|db407\\.de|dbdepot\\.de|dbv\\.de|debeka\\.de|delorean\\.de|deloreans\\.de|der-arosa\\.de|der-auto-blogger\\.de|der-autotester\\.de|der-entenschnabel\\.de|deutsche-automobile\\.de|deutscher-saab-club\\.de|deuvet\\.de|devk\\.de|die-oldtimer-garage\\.de|die-urgewalt\\.de|diebayerische\\.de|diespritzer\\.de|dietuner\\.com|diplomat-b\\.de|dkw-autounion\\.de|dkw-schnellaster\\.de|dmc-delorean\\.de|dodge-forum\\.com|doepper-oldtimerstoffe-gummiprofile\\.de|doppel-wobber\\.de|doublesix\\.de|dp-motorsport\\.de|dr-mustang\\.com|dream-cars\\.ch|dreamcarisma\\.de|drivers-forum\\.de|driversgroove\\.com|driversnet\\.de|ds-motorsport\\.de|dsclub\\.de|duetto-club\\.ch|duhamster\\.de|dustercommunity\\.de|e-kadett\\.de|e30\\.de|e31\\.de|e34\\.de|e36-page\\.net|e39-forum\\.de|e60-forum\\.de|ebay-kleinanzeigen\\.de\\/s-auto-rad-boot|ebay\\.de\\/b\\/Motors|ecomento\\.tv|edition-weiss-blau\\.de|eisenmann-sportauspuff\\.de|elchfans\\.de|elektroauto-zoe\\.de|elite-sportwagen\\.ch|emil\\.de|engekiste\\.de|erdgasfahrer-forum\\.de|ergo\\.de|erwin\\.volkswagen\\.de|escc\\.at|escort-club-hamburg\\.de|escort-team-grimma\\.de|escort1-2\\.de|espace-freunde\\.de|euac\\.at|europa-go\\.de|europa\\.de|evocars-magazin\\.de|f20-forum\\.de|fabia4fun\\.de|fahrlehrerversicherung\\.de|fahrrueckt\\.de|fahrzeugdienst-markov\\.de|fanaticar\\.de|faszination-911\\.de|faszination-autos\\.com|faszination-taunus\\.de|faszination356\\.de|faz\\.net\\/aktuell\\/wirtschaft\\/auto-verkehr|fbieger\\.de|ferozaclub\\.de|fette-schlitten\\.de|feuersozietaet\\.de|feuerwehr-veteranenhof-solingen\\.de|fiat-forum\\.de|fiat-spider\\.de|fiat500-forum\\.de|fiat500\\.twoday\\.net|fiat\\.de|fiatbarchetta\\.com|finanztip\\.de|firmenauto\\.de|flash\\.de|focus\\.de|focus\\.de\\/auto|ford-forum\\.de|ford\\.de|fordcapri2600rs\\.de|fordcapri\\.de|fordfan\\.de|formfreu\\.de|forum\\.desert\\.at|freemont\\.de|fusselblog\\.de|geilekarre\\.de|generali\\.de|ghv-darmstadt\\.de|golf-6\\.com|golf1\\.info|golf3\\.de|golf4\\.de|golfv\\.de|gothaer\\.de|grande-punto\\.de|gruen-versichert\\.de|gvv\\.de|haflinger-4wd\\.com|hamann-motorsport\\.com|hamburg-hondaz\\.de|handelsblatt\\.com\\/auto|hansemerkur\\.de|hdi\\.de|hellwig-germany\\.de|helvetia\\.com\\/de|hondapower\\.de|huk24\\.de|huk\\.de|impulsee\\.at|insideperformance\\.de|insignia-blog\\.de|itzehoer\\.de|jeep-jeeper\\.de|kaeferclub-wolfsburg\\.de|kalaydo\\.de\\/auto|kfz-auskunft\\.de|kia-board\\.de|kleinanzeigen\\.de\\/Auto-Motor|kleinanzeigen\\.ebay\\.de\\/anzeigen\\/s-auto-rad-boot|kleinwagenblog\\.de|konradsheim\\.at|local24\\.de\\/autos-fahrzeuge|m-forum\\.de|magazin-auto\\.de|maxrev\\.de|mazda-forum\\.info|mazda\\.at|mazda\\.ch|mazda\\.de|mbslk\\.de|mein-auto-blog\\.de|mein-elektroauto\\.com|mercedes-benz\\.de|mercedes-fans\\.de|mercedescabrioclub\\.de|mercedesstrich8\\.de|mgcc\\.de|mini2\\.info|mini\\.ch|mobile\\.de|motor-inside\\.com|motor-talk\\.de|motoreport\\.de|msn\\.com\\/de-de\\/auto|mtm-online\\.de|munga\\.worldoftechnic\\.de|mx-5\\.de|mykangoo\\.de|n-tv\\.de\\/auto|navi-forum\\.net|newcarz\\.de|nexible\\.de|niederflur\\.de|nierenspender\\.de|nsu-ro80\\.de|oeamtc\\.at|oldtimer-markt\\.de|oldtimerlackierungen\\.de|one-eleven\\.de|onthegrid\\.de|opel-blog\\.com|opel-voting\\.de|pagenstecher\\.de|panini-radente\\.de|pappenforum\\.de|passat-kartei\\.de|passatforum\\.com|passiondriving\\.de|peugeot-304\\.de|peugeot\\.de|peugeotboard\\.de|pff\\.de|pocg\\.de|polo9n\\.info|pontiac-club\\.ch|pre-50\\.de\\.tl|prestigecars\\.de|quadrifoglio\\.ch|quoka\\.de\\/auto-motorrad|racing-history\\.de\\/blog|racing14\\.de|racingblog\\.de|rad-ab\\.com|rallye-magazin\\.de|rc\\.opelgt\\.org|renault-alpine\\.de|renault-sport-spider\\.de|renault16\\.de|renault\\.de|renaultforum\\.net|ruv\\.de|rv24\\.de|saab-cars\\.de|sam-rivers\\.beepworld\\.de|samtroter77\\.beepworld\\.de|sandmanns-welt\\.de|scci\\.ch|seat-leon\\.de|seatforum\\.de|senatorman\\.de|seven-inside\\.de|sgaf\\.de|shots\\.media\\/blog\\/cars|skandix\\.de|skodacommunity\\.de|skodafreunde\\.de|slk-club\\.mercedes-benz-clubs\\.com|slpagode\\.mercedes-benz-clubs\\.com|smart-forum\\.de|smart-roadster-club\\.de|smartfahrer-forum\\.iphpbb3\\.com|smarttrailer\\.ch|sparkassen-direkt\\.de|sparkassenversicherung\\.de|speedheads\\.de|spiderplace\\.de|spiegel\\.de\\/auto|spiegel\\.de\\/wirtschaft\\/service\\/kfz-versicherung-wechseln-so-versichern-sie-ihr-auto-gut-und-guenstig-a-1292148\\.html|stern\\.de\\/auto|sterntwiete\\.mparschau\\.de|stilo\\.info|subaru-community\\.com|subaru\\.de|sueddeutsche\\.de\\/auto|sueddeutsche\\.de\\/vergleich\\/versicherung\\/kfz|superpanda\\.de|sv-sachsen\\.de|syndikat-racewars\\.de|t-online\\.de\\/auto|t4-wiki\\.de|taunus\\.at|taxi-online\\.blogspot\\.com|tcs\\.ch|techart\\.de|teslamag\\.de|tff-forum\\.de|tipo-forum\\.de|touareg-freunde\\.de|trabitechnik\\.com|tractionavant\\.ch|truckscout24\\.de|tuning-stories\\.de|tuningblogger\\.de|tuningcar\\.de|twingotuningforum\\.de|tx-board\\.de|typ14\\.de|typ82\\.info|unimog-community\\.de|universa\\.de|us-v8\\.de|veedub-docs\\.com|verivox\\.de|vhv\\.de|viermalvier\\.de|vkb\\.de|volkswagen\\.at|volvoclub\\.ch|volvoclub\\.org|vw-club-kl\\.de|vw-karmann-ghia\\.de|vw4ever\\.de|vwbusforum\\.ch|vwcorrado\\.de|vwteam\\.com|w136\\.de|wgsoft\\.de|wgv\\.de|wirkaufendeinauto\\.de|wolfsburg-edition\\.info|wwk\\.de|x1forum\\.de|youngtimerclub\\.de|zroadster\\.com|zurich\\.de|autoampel\\.de|condor-versicherungen\\.de|adcuri\\.barmenia24\\.de|emil\\.de|adac\\.de|admiraldirekt\\.de|allianz\\.de|allianzdirect\\.de|alte-leipziger\\.de|autobild\\.de|autoversicherung\\.adac\\.de|axa\\.de|barmenia-direkt\\.de|barmenia\\.de|basler\\.de|bavariadirekt\\.de|bgv\\.de|billigeautoversicherungen\\.de|concordia\\.de|confidon\\.de|continentale\\.de|cosmosdirekt\\.de|da-direkt\\.de|dbv\\.de|debeka\\.de|devk\\.de|diebayerische\\.de|dieversicherer\\.de|dieversicherer\\.de|ergo\\.de|europa-go\\.de|europa\\.de|fahrlehrerversicherung\\.de|feuersozietaet\\.de|finanztip\\.de|focus\\.de|gdv\\.de|gdv\\.de|generali\\.de|ghv-darmstadt\\.de|gothaer\\.de|gruen-versichert\\.de|gvv\\.de|hansemerkur\\.de|hdi\\.de|helvetia\\.com\\/de|huk\\.de|huk24\\.de|itzehoer\\.de|kfz-auskunft\\.de|sparkassen-direkt\\.de|sparkassenversicherung\\.de|sv-sachsen\\.de|universa\\.de|verivox\\.de|wwk\\.de|zurich\\.de|vhv\\.de|nexible\\.de|rv24\\.de|gothaer\\.de|wgv\\.de|vkb\\.de|sueddeutsche\\.de\\/vergleich\\/versicherung\\/kfz|ruv\\.de|spiegel\\.de\\/wirtschaft\\/service\\/kfz-versicherung-wechseln-so-versichern-sie-ihr-auto-gut-und-guenstig-a-1292148\\.html|autoscout24\\.de|mobile\\.de|auto\\.de|t-online\\.de\\/auto|wirkaufendeinauto\\.de|autouncle\\.de|bild\\.de\\/auto|auto\\.infranken\\.de|n-tv\\.de\\/auto|faz\\.net\\/aktuell\\/wirtschaft\\/auto-verkehr|focus\\.de\\/auto|auto-motor-und-sport\\.de|handelsblatt\\.com\\/auto|spiegel\\.de\\/auto|sueddeutsche\\.de\\/auto|amazon\\.de\\/auto-tuning-autoteile|msn\\.com\\/de-de\\/auto|ebay-kleinanzeigen\\.de\\/s-auto-rad-boot|ebay\\.de\\/b\\/Motors|autozeitung\\.de|bgv\\.de|stern\\.de\\/auto|rad-ab\\.com|mein-auto-blog\\.de|ecomento\\.tv|blog\\.daimler\\.de|rallye-magazin\\.de|blog\\.mercedes-benz-passion\\.com|autophorie\\.de|mein-elektroauto\\.com|autogefuehl\\.de|1300ccm\\.de|auto-geil\\.de|insignia-blog\\.de|passiondriving\\.de|bimmertoday\\.de|driversgroove\\.com|auto-presse\\.de|20832\\.com|motoreport\\.de|autogazette\\.de|racingblog\\.de|ausfahrt\\.tv|autoaid\\.de\\/blog|der-auto-blogger\\.de|autodino\\.de\\/autonews|autokarma\\.de|der-autotester\\.de|newcarz\\.de|prestigecars\\.de|shots\\.media\\/blog\\/cars|automobil-blog\\.de|fanaticar\\.de|formfreu\\.de|blog\\.auto-24\\.net|tuning-stories\\.de|opel-blog\\.com|evocars-magazin\\.de|faszination-autos\\.com|blog\\.meinauto\\.de|taxi-online\\.blogspot\\.com|impulsee\\.at|racing-history\\.de\\/blog|kleinwagenblog\\.de|racing14\\.de|cargo-blog\\.com|fahrrueckt\\.de|bigblogg\\.com|fusselblog\\.de|autofilou\\.at|automobil\\.org|blog\\.autoplenum\\.de|beautygeek\\.de|magazin-auto\\.de|sandmanns-welt\\.de|billigstautos\\.com|onthegrid\\.de|motor-inside\\.com|motor-talk\\.de|blablacar\\.de|auto-service\\.de|autoplenum\\.de|autozeitung\\.de|truckscout24\\.de|auto\\.de|autohaus24\\.de|pff\\.de|quoka\\.de\\/auto-motorrad|kalaydo\\.de\\/auto|local24\\.de\\/autos-fahrzeuge|kleinanzeigen\\.de\\/Auto-Motor|kleinanzeigen\\.ebay\\.de\\/anzeigen\\/s-auto-rad-boot|ebay-kleinanzeigen\\.de\\/s-autos|ebay-kleinanzeigen\\.de\\/s-anzeige\\/.*-216-.*)($|\\/.*)"
+          }
+        ]
+      }
+    },
+    "navigation_to_car_rental_project_3_comparison_sites": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "AddressBar",
+        "Bookmark",
+        "WebPage",
+        "StartPage",
+        "Redirect"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": true,
+        "matches_any": [
+          {
+            "urlMatches": "http(s)?:\\/(\\/|\\/.*\\.)(?:rentalcars\\.com\\/de|bookingautos\\.com\\/de|mietwagen\\.idealo\\.de|billiger-mietwagen\\.de|booking\\.com\\/cars\\.de\\.html|carflexi\\.com\\/de-de|happycar\\.de|kayak\\.de\\/cars|mietwagen-check\\.de|momondo\\.de\\/mietwagen|skyscanner\\.de\\/mietwagen|swoodoo\\.com\\/cars|save70\\.com\\/cars|sixt\\.de|europcar\\.de|billiger-mietwagen\\.de|cardelmar\\.com\\/de|sunnycars\\.de|mietwagen-check\\.de|hertz\\.de\\/rentacar|buchbinder\\.de\\/de|happycar\\.de|enterprise\\.de\\/de\\/autovermietung\\.html|airbnb\\.de|carhire\\.ryanair\\.com|cars\\.wizzair\\.com|rentalcars\\.com|turkishairlines\\.com\\/de-de\\/car-rental|qatarairways\\.com\\/de-de|viator\\.com\\/de-DE|rent-a-guide\\.de|travelcircus\\.de|turbopass\\.de|hamburg-tourism\\.de|londonpass\\.de|tripadvisor\\.de|urlaubsguru\\.de)($|\\/.*)"
+          }
+        ]
+      }
+    },
+    "navigation_to_discord": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "AddressBar",
+        "Bookmark",
+        "WebPage",
+        "StartPage",
+        "Redirect"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": true,
+        "matches_any": [
+          {
+            "urlMatches": "http(s)?:\\/\\/(?:www\\.)?discordapp\\.com.*"
+          }
+        ]
+      }
+    },
+    "navigation_to_dsl_project_1_supplier_sites": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "AddressBar",
+        "Bookmark",
+        "WebPage",
+        "StartPage",
+        "Redirect"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": true,
+        "matches_any": [
+          {
+            "urlMatches": "http(s)?:\\/(\\/|\\/.*\\.)(?:skydsl\\.eu|vodafone\\.de\\/dsl\\/angebote|vodafone\\.de\\/internet-telefon\\/dsl|telekom\\.de\\/zuhause\\/tarife-und-optionen\\/internet|dsl\\.1und1\\.de\\/dsl-tarife|o2online\\.de\\/dsl-festnetz\\/dsl-tarife|congstar\\.de\\/festnetz-internet\\/homespot-100|m-net\\.de\\/privatkunden\\/internet-telefon|netcologne\\.de\\/privatkunden\\/telefon-internet\\/tarifuebersicht|ewe\\.de\\/internet|swb\\.de\\/internet\\/dsl-tarifvergleich|osnatel\\.de\\/internet\\/tarife|netaachen\\.de\\/privatkunden\\/telefon-internet\\/tarifuebersicht|deutsche-glasfaser\\.de\\/tarife|dsl-germany\\.com\\/en\\/|internetanbieter-deutschland\\.de\\/|o2online\\.de\\/dsl-festnetz\\/dsl-speedtest\\/|breitbandmessung\\.de\\/|wieistmeineip\\.de\\/|speedmeter\\.de\\/|speedtest\\.computerbild\\.de\\/|speedreport\\.de\\/|1und1\\.net\\/business|tele2\\.nl\\/shop\\/thuis\\/internet-abonnement|telekom\\.de\\/start|tele2\\.se\\/|unitymedia\\.de\\/|smartklar\\.de\\/|internetanbieter\\.de\\/|pyur\\.com\\/|dslregional\\.de\\/|billiger-surfen\\.de\\/|skydsl\\.eu\\/en-DE\\/Personal\\/Internet-via-satellite|o2online\\.de\\/e-shop\\/dsl-festnetz\\/)($|\\/.*)"
+          }
+        ]
+      }
+    },
+    "navigation_to_dsl_project_3_comparison_sites": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "AddressBar",
+        "Bookmark",
+        "WebPage",
+        "StartPage",
+        "Redirect"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": true,
+        "matches_any": [
+          {
+            "urlMatches": "http(s)?:\\/(\\/|\\/.*\\.)(?:1und1\\.de\\/dsl-anbieter|dslweb\\.de\\/dsl-anbieter\\.htm|tarife\\.chip\\.de\\/dsl-vertrag|tarife\\.chip\\.de|bankweb\\.com\\/de\\/dsl|computerbild\\.de\\/tarifrechner\\/dsl-vergleich|wechselpiraten\\.de\\/dsl-vergleich|toptarif\\.de\\/dsl|stern\\.de\\/vergleich\\/dsl|billiger-telefonieren\\.de\\/dsl-vergleich|sparhandy\\.de\\/dsl\\/vergleich|handelsblatt\\.com\\/dsl-rechner|onlinekosten\\.de\\/dsl\\/preisvergleich|vergleich\\.org\\/dsl|dslvergleich\\.com|1-dsl-vergleich\\.de|geld\\.de\\/dsl-vergleich|telefonanschluss-beantragen\\.de\\/tarifrechner\\.html|dslundfestnetz\\.net\\/news\\/dsl-anbieter-vergleich-stiftung-warentest|guenstiger-internetanbieter\\.net\\/news\\/breitband-internet-anbieter)($|\\/.*)"
+          }
+        ]
+      }
+    },
+    "navigation_to_electricity_project_1_energy_supplier_sites": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "AddressBar",
+        "Bookmark",
+        "WebPage",
+        "StartPage",
+        "Redirect"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": true,
+        "matches_any": [
+          {
+            "urlMatches": "http(s)?:\\/(\\/|\\/.*\\.)(?:enqu\\.de|eprimo\\.de|iam\\.innogy\\.com|lekker\\.de|lew\\.de|vattenfall\\.de|yello\\.de|polarstern-energie\\.de|greenpeace-energy\\.de|entega\\.de|stromanbieter\\.enercity\\.de|naturstrom\\.de|gruenwelt\\.de|e-wie-einfach\\.de)($|\\/.*)"
+          }
+        ]
+      }
+    },
+    "navigation_to_electricity_project_2_news_sites": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "AddressBar",
+        "Bookmark",
+        "WebPage",
+        "StartPage",
+        "Redirect"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": true,
+        "matches_any": [
+          {
+            "urlMatches": "http(s)?:\\/(\\/|\\/.*\\.)(?:spiegel\\.de\\/wirtschaft|welt\\.de\\/wirtschaft|zeit\\.de\\/wirtschaft\\/index|faz\\.net\\/aktuell\\/wirtschaft|faz\\.net\\/aktuell\\/finanzen|sueddeutsche\\.de\\/wirtschaft|bild\\.de\\/geld\\/startseite\\/geld|tagesschau\\.de\\/wirtschaft|n-tv\\.de\\/wirtschaft|tagesspiegel\\.de\\/wirtschaft|handelsblatt\\.com\\/finanzen|rp-online\\.de\\/wirtschaft|finanzen\\.net\\/konjunktur|finanzen100\\.de|t-online\\.de\\/finanzen|nzz\\.ch\\/wirtschaft)($|\\/.*)"
+          }
+        ]
+      }
+    },
+    "navigation_to_electricity_project_3_comparison_sites": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "AddressBar",
+        "Bookmark",
+        "WebPage",
+        "StartPage",
+        "Redirect"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": true,
+        "matches_any": [
+          {
+            "urlMatches": "http(s)?:\\/(\\/|\\/.*\\.)(?:wechseljetzt\\.de\\/stromrechner|stromvergleich\\.de|switchup\\.de\\/stromvergleich|toptarif\\.de\\/stromvergleich|toptarif\\.de\\/stromvergleich|wechselpiraten\\.de)($|\\/.*)"
+          }
+        ]
+      }
+    },
+    "navigation_to_electricity_project_4_real_estate_search_engine_sites": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "AddressBar",
+        "Bookmark",
+        "WebPage",
+        "StartPage",
+        "Redirect"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": true,
+        "matches_any": [
+          {
+            "urlMatches": "http(s)?:\\/(\\/|\\/.*\\.)(?:immobilienscout24\\.de|immonet\\.de|wg-gesucht\\.de|immowelt\\.de|ebay-kleinanzeigen\\.de\\/s-immobilien\\/c195|ebay-kleinanzeigen\\.de\\/s-haus-mieten\\/c205|ebay-kleinanzeigen\\.de\\/s-auf-zeit-wg\\/c199|ebay-kleinanzeigen\\.de\\/s-wohnung-kaufen\\/c196|ebay-kleinanzeigen\\.de\\/s-ferienwohnung-ferienhaus\\/c275|ebay-kleinanzeigen\\.de\\/s-garage-lagerraum\\/c197|ebay-kleinanzeigen\\.de\\/s-gewerbeimmobilien\\/c277|ebay-kleinanzeigen\\.de\\/s-grundstuecke-garten\\/c207|ebay-kleinanzeigen\\.de\\/s-haus-kaufen\\/c208|ebay-kleinanzeigen\\.de\\/s-haus-mieten\\/c205|ebay-kleinanzeigen\\.de\\/s-wohnung-mieten\\/c203|ebay-kleinanzeigen\\.de\\/s-umzug-transport\\/c238|ebay-kleinanzeigen\\.de\\/s-immobilien\\/sonstiges\\/c198|immobilo\\.de|ohne-makler\\.net|meinestadt\\.de|immobilien\\.de|wohnungsmarkt24\\.de|ebay-kleinanzeigen\\.de\\/s-anzeige\\/.*-(196|199|203|205|208)-.*)($|\\/.*)"
+          }
+        ]
+      }
+    },
+    "navigation_to_electricity_project_5_personal_finance_sites": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "AddressBar",
+        "Bookmark",
+        "WebPage",
+        "StartPage",
+        "Redirect"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": true,
+        "matches_any": [
+          {
+            "urlMatches": "http(s)?:\\/(\\/|\\/.*\\.)(?:finanzbildung\\.jetzt|geldwert-finanz\\.de|klunkerchen\\.com|kleingeldhelden\\.com|geldfrau\\.de|exstudentin\\.wordpress\\.com|madamemoneypenny\\.de|timschaefermedia\\.com|finanzwesir\\.com|frugalisten\\.de|dividendenadel\\.de|mr-market\\.de|high-tech-investing\\.de|finanzrocker\\.net|finanzglueck\\.de|intelligent-investieren\\.net)($|\\/.*)"
+          }
+        ]
+      }
+    },
+    "navigation_to_electricity_project_6_house_building_sites": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "AddressBar",
+        "Bookmark",
+        "WebPage",
+        "StartPage",
+        "Redirect"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": true,
+        "matches_any": [
+          {
+            "urlMatches": "http(s)?:\\/(\\/|\\/.*\\.)(?:obi\\.de|bauhaus\\.info|hornbach\\.de|hagebau\\.de|toom\\.de|globus-baumarkt\\.de|poco\\.de|i-m\\.de|hellweg\\.de|raiffeisenmarkt\\.de|schulte-baustoffe\\.de|ladenzeile\\.de|hagebau\\.de|selbst\\.de|billiger\\.de|benz24\\.de|hausjournal\\.net)($|\\/.*)"
+          }
+        ]
+      }
+    },
+    "navigation_to_gaming_sites": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "AddressBar",
+        "Bookmark",
+        "WebPage",
+        "StartPage",
+        "Redirect"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": true,
+        "matches_any": [
+          {
+            "urlMatches": "http(s)?:\\/(\\/|\\/.*\\.)(?:cheapshark\\.com|isthereanydeal\\.com|steampowered\\.com|epicgames\\.com|nexusmods\\.com|gog\\.com|humblebundle\\.com|itch\\.io|gamejolt\\.com|kongregate\\.com|fanatical\\.com|xbox\\.com|playstation\\.com|roblox\\.com|gry-online\\.pl|cdaction\\.pl|ppe\\.pl|gram\\.pl|polygamia\\.pl|eurogamer\\.pl|minecraft\\.net|wowhead\\.com|gamespot\\.com|ign\\.com|jeuxvideo\\.com|gamestar\\.de|multiplayer\\.it|everyeye\\.it|moddb\\.com|guru3d\\.com|rockpapershotgun\\.com|g2a\\.com|hltv\\.org|leagueoflegends\\.com|worldoftanks\\.com|worldoftanks\\.ru|gameforge\\.com|blizzard\\.com|pcgamer\\.com|smogon\\.com|bulbagarden\\.net|gamesradar\\.com|playground\\.ru|kanobu\\.ru|stopgame\\.ru|igromania\\.ru|cybersport\\.ru|vgtimes\\.ru|destructoid\\.com|gamesradar\\.com|gameinformer\\.com|metacritic\\.com\\/game|nintendolife\\.com|gamespot\\.com|christcenteredgamer\\.com|ign\\.com|kotaku\\.com|n4g\\.com|escapistmagazine\\.com|pcgamer\\.com|neoseeker\\.com|giantbomb\\.com|gamefront\\.com|engadget\\.com\\/gaming|gamesradar\\.com|cheatcc\\.com|supercheats\\.com|gamicus\\.gamepedia\\.com|greenmangaming\\.com|gamefaqs\\.gamespot\\.com|addictinggames\\.com)($|\\/.*)"
+          }
+        ]
+      }
+    },
+    "navigation_to_gaming_sites_yt_pewdiepie": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "AddressBar",
+        "Bookmark",
+        "WebPage",
+        "StartPage",
+        "Redirect"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": true,
+        "matches_any": [
+          {
+            "urlMatches": "http(s)?:\\/(\\/|\\/.*\\.)(?:youtube\\.com\\/(user\\/PewDiePie|channel\\/UC-lHJZR3Gqxm24_Vd_AJ5Yw|playlist\\?list=PLYH8WvNV1YEnLCzUDWueIZQXDNhqLKywk|(watch\\?v=(T2lYBUyslKk|yB4Q3ezW9fM|xejFV2JCmSM|HKNj9CSzKxA|2D2vWXt1uII|PDvNrq93ktI|Wm-HtcQ48_I|oLAw5EGe1zY|YVxaK8WQhJo|GYpOapkr5MA|h7n-wXauzPU|Kbl3b_mmyXE|VsVjKpsyN7o|UA59y8iCRCQ|DIDe8JctUGs|qpLFWwo7tL0|Gc1I9itun8Q|8Le7yEPA5SY|lyG942-zMmg|l0hait9qXOE|3Ag0BzLkaD4|dJg1ptpqN2g|RJ2XlUga7Mc|EtlL3Hfavus|UNiRYCTpcGM|yzJokj2gelY|SyElmtT8MQw|p-DPZ6M6-7E|-Anyq7-N0zY|WzC2f5PSIyw|wHQKij7tATE|srScJAs2i1c|NTJY_EhT8OM|YuihlgsgNSo|k1mAqt9yKYY|zTxxlPGohz0|Wog1Zwx9jV0|VGt-BZ-SxGI|4Lv25Vl_LO8|UNiRYCTpcGM))))($|\\/.*)"
+          }
+        ]
+      }
+    },
+    "navigation_to_mixer": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "AddressBar",
+        "Bookmark",
+        "WebPage",
+        "StartPage",
+        "Redirect"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": true,
+        "matches_any": [
+          {
+            "urlMatches": "http(s)?:\\/\\/(?:www\\.)?mixer\\.com.*"
+          }
+        ]
+      }
+    },
+    "navigation_to_startpage": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "UICommand"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": false,
+        "matches_any": [
+          {
+            "urlMatches": "chrome:\\/\\/startpage.*"
+          }
+        ]
+      }
+    },
+    "navigation_to_twitch": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "AddressBar",
+        "Bookmark",
+        "WebPage",
+        "StartPage",
+        "Redirect"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": true,
+        "matches_any": [
+          {
+            "urlMatches": "http(s)?:\\/\\/(?:www\\.)?twitch\\.tv.*"
+          }
+        ]
+      }
+    },
+    "navigation_to_yandex_service": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "AddressBar",
+        "Bookmark",
+        "StartPage"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": true,
+        "matches_any": [
+          {
+            "urlMatches": "http(s)?:\\/\\/.*yandex\\.ru.*"
+          },
+          {
+            "urlMatches": "http(s)?:\\/\\/(?:www\\.)?auto\\.ru.*"
+          },
+          {
+            "urlMatches": "http(s)?:\\/\\/(?:www\\.)?kinopoisk\\.ru.*"
+          },
+          {
+            "urlMatches": "http(s)?:\\/\\/(?:www\\.)?edadeal\\.ru.*"
+          },
+          {
+            "urlMatches": "http(s)?:\\/\\/(?:www\\.)?beru\\.ru.*"
+          },
+          {
+            "urlMatches": "http(s)?:\\/\\/(?:www\\.)?bringly\\.ru.*"
+          }
+        ]
+      }
+    },
+    "yandex_attributed_search": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "AddressBar",
+        "ContextMenu",
+        "Redirect",
+        "StartPage",
+        "WebPage"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": true,
+        "matches_any": [
+          {
+            "getParamsContain": {
+              "clid": [
+                "9582",
+                "1669559",
+                "2343200",
+                "2297897"
+              ]
+            },
+            "urlMatches": "http(s)?:\\/\\/yandex\\.(.{2,3}|.{2,3}\\..{2})/search.*"
+          }
+        ]
+      }
+    },
+    "yandex_organic_search": {
+      "is_error_page": false,
+      "is_same_document": false,
+      "navigation_context": [
+        "AddressBar",
+        "ContextMenu",
+        "Redirect",
+        "StartPage",
+        "WebPage"
+      ],
+      "navigation_phase": [
+        "Finish"
+      ],
+      "url": {
+        "match_redirect_chain": true,
+        "matches_any": [
+          {
+            "urlMatches": "http(s)?:\\/\\/yandex\\.(.{2,3}|.{2,3}\\..{2})/search.*"
+          }
+        ]
+      }
+    }
+  },
+  "version": 115
+}

@@ -1,0 +1,1 @@
+{"coordinates":"pkg:maven/org.itadaki/bzip2@0.9.1","description":"jbzip2 is a Java bzip2 compression/decompression library. It can be used as a replacement for the Apache CBZip2InputStream / CBZip2OutputStream classes.","reference":"https://ossindex.sonatype.org/component/pkg:maven/org.itadaki/bzip2@0.9.1","vulnerabilities":[]}

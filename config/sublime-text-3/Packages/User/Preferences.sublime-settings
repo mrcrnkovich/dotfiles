@@ -1,0 +1,10 @@
+{
+	"font_size": 13,
+	"ignored_packages":
+	[
+		""
+	],
+	"theme": "Default.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"wrap_width": 88
+}

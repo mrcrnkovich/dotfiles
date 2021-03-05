@@ -1,3 +1,7 @@
+! ###########################
+! #      Color Settings     #
+! ###########################
+
 foreground: #00cc00
 foreground_bold: #a8a19f
 cursor: #a8a19f
@@ -42,16 +46,19 @@ color7: #c0c0c0
 ! White
 color15: #ffffff
 
+! ###########################
+! #      RXVT Terminal      #
+! ###########################
+
 URxvt.background: [95]#000000
 URxvt.intensityStyles: true
 URxvt*foreground: White
 URxvt.cursorColor: #ffffff
 URxvt.cursorBlink: 1
 URxvt.cursorUnderline: 1
-URxvt.font: xft:xos4 Terminus:style=Regular:size=14
+URxvt.font: xft:terminus:size=14
 URxvt.depth: 32
 URxvt.borderless: true
-
 URxvt*color4: RoyalBlue
 URxvt*color12: RoyalBlue
 
@@ -63,41 +70,3 @@ URxvt*scrollBar_right: false
 
 !  scrollback buffer lines - 65535 is max on most machines (64 is default)
 URxvt*saveLines: 4096 
-
-!  tint with any color; i.e., blue, red, tomato4, olivedrab2, etc.
-!    some nice listings are at:
-!      http://www.nisrv.com/drupal/?q=node/11
-!      http://www.htmlgoodies.com/tutorials/colors/article.php/3478921
-!  URxvt*tintColor: Blue
-
-!  shading - 0 to 99 darkens, 101 to 200 lightens.
-!    Dont use with tintColor; just use a darker or lighter color instead.
-! URxvt*shading: 40
-
-!  Xft (X FreeType) with Bitstream, DejaVu, Liberation, or Terminus fonts:
-!   Fedora/debian packages: libXft/libxft2 
-!   An anti-aliased font setup with Xft looks fantastic; it can be a bit choppy 
-!   on older systems. You can always turn off anti-aliasing (antialias=false) if
-!   your terminal is sluggish. Use only ONE of the Xft pairs below:
-! 
-!  Xft: Bitstream fonts
-!   Fedora/debian packages: bitstream-vera-sans-mono-fonts/ttf-bitstream-vera 
-! URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=12:antialias=true:hinting=true
-! URxvt*boldFont: xft:Bitstream Vera Sans Mono:bold:pixelsize=12:antialias=true:hinting=true
-! 
-!  Xft: DejaVu fonts
-!   Fedora/debian packages: dejavu-sans-mono-fonts/ttf-dejavu 
-!  URxvt*font: xft:DejaVu Sans Mono:pixelsize=12:antialias=true:hinting=true
-!  URxvt*boldFont: xft:DejaVu Sans 
-!  Mono:bold:pixelsize=12:antialias=true:hinting=true
-! 
-!  Xft: Liberation fonts
-!   Fedora/debian packages: liberation-mono-fonts/ttf-liberation
-! URxvt*font: xft:Liberation Mono:pixelsize=13:antialias=true:hinting=true
-! URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=13:antialias=true:hinting=true
-! 
-!  Xft: Terminus fonts
-!   Fedora/debian packages: terminus-fonts/xfonts-terminus
-! URxvt*font: xft:terminus:pixelsize=15
-! URxvt*boldFont: xft:terminus:bold:pixelsize=15
-

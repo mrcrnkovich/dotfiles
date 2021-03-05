@@ -1,0 +1,13 @@
+opqen_with 
+find 
+open_withq 
+open_with q
+rename receipts-other.csv
+delete
+open_withqclear 
+shell q
+
+ 
+open_with 
+open_with nvim
+rename Downloads
