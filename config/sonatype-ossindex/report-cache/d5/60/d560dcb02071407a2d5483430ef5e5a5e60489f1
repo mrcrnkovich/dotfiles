@@ -1,1 +1,0 @@
-{"coordinates":"pkg:maven/net.bytebuddy/byte-buddy@1.9.10","description":"Byte Buddy is a Java library for creating Java classes at run time.\n        This artifact is a build of Byte Buddy with all ASM dependencies repackaged into its own name space.","reference":"https://ossindex.sonatype.org/component/pkg:maven/net.bytebuddy/byte-buddy@1.9.10","vulnerabilities":[]}

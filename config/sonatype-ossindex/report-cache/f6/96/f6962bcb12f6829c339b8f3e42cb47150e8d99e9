@@ -1,1 +1,0 @@
-{"coordinates":"pkg:maven/com.github.luben/zstd-jni@1.4.0-1","description":"JNI bindings for Zstd native library that provides fast and high compression lossless algorithm for Java and all JVM languages.","reference":"https://ossindex.sonatype.org/component/pkg:maven/com.github.luben/zstd-jni@1.4.0-1","vulnerabilities":[]}

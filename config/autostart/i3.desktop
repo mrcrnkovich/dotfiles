@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Exec=i3
-Hidden=false
-X-MATE-Autostart-enabled=true
-Name[en_US]=i3
-Name=i3
-Comment[en_US]=window manager
-Comment=window manager
