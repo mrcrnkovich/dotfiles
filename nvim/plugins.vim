@@ -1,5 +1,6 @@
 call plug#begin()
     Plug 'Shougo/denite.nvim'
+    Plug 'Olical/conjure', {'tag': 'v4.15.0'}
     Plug 'scrooloose/nerdTree'
     Plug 'godlygeek/tabular'
     Plug 'plasticboy/vim-markdown'
