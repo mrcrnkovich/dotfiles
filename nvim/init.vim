@@ -7,7 +7,7 @@ set nocompatible
 filetype off
 
 "Load plugins here (pathogen or vundle)
-source ~/.config/nvim/plugins.vim
+source $HOME/.config/nvim/plugins.vim
 
 " Turn on syntax highlighting
 syntax on
@@ -20,6 +20,9 @@ let mapleader = ","
 
 " Search down into subfolders, tab-completion
 set path+=**
+
+" Set Python Path
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 " Security
 set modelines=0

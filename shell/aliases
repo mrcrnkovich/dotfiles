@@ -1,0 +1,16 @@
+# script to contain all my aliases
+
+
+export EDITOR=nvim
+export VISUAL=nvim
+
+alias e='$EDITOR'
+alias vi='nvim'
+alias vim='nvim'
+alias co='cd ~/coding'
+
+alias dl='cd ~/Downloads'
+alias zconfig='$EDITOR $HOME/dotfiles/shell/zshrc && source $HOME/.zshrc'
+alias alconfig='$EDITOR $HOME/dotfiles/shell/aliases && source $HOME/.zshrc'
+
+alias test='echo "hi"'
