@@ -21,8 +21,13 @@ let mapleader = ","
 " Search down into subfolders, tab-completion
 set path+=**
 
+let uname = system('uname -a')
 " Set Python Path
-let g:python3_host_prog = '/usr/local/bin/python3'
+if uname ==? "Darwin"
+  let g:python3_host_prog = '/usr/local/bin/python3'
+elseif uname ==? "Linux"
+  let g:python3_host_prog = '/usr/bin/python3'
+endif
 
 " Security
 set modelines=0
@@ -32,8 +37,6 @@ set relativenumber
 set number
 
 " Show file stats
-set ruler
-
 " Blink cursor on error instead of beeping
 set visualbell
 
@@ -96,7 +99,6 @@ nnoremap <F1> :set invfullscreen<CR>
 vnoremap <F1> :set invfullscreen<CR>
 inoremap <CAPSLOCK> <ESC>
 
-" Textmate holdouts
 
 " Formatting
 map <leader>q gqip
