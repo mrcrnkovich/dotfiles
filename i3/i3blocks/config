@@ -1,0 +1,46 @@
+# Global properties
+separator=true
+separator_block_width=15
+
+[wifi]
+command=nmcli device status | gawk 'FNR == 2 {printf "%s\n", $4}'
+color=#5fd700
+interval=5
+separator=false
+
+[ip]
+command=hostname -i
+interval=once
+color=#5fd700
+
+[memory]
+label=MEM: 
+command=source $HOME/.config/i3blocks/scripts/memory.sh
+interval=30
+
+[cpu]
+label=CPU:
+interval=10
+
+[temperature]
+command=T=$(cat /sys/class/thermal/thermal_zone0/temp); echo $(( $T / 1000 ))°C
+label=💻 
+interval=10
+separator=true
+
+[battery]
+command=acpi | gawk '{$1=""; $2=""; print}'
+label=
+interval=5
+separator=true
+
+[time]
+command= date '+%H:%M'
+label=🕓 
+interval=10
+separator=false
+
+[day]
+command= date '+%a %b %e, %Y';[[ -z "${BLOCK_BUTTON}" ]] || gsimplecal &
+interval=30
+separator=true
