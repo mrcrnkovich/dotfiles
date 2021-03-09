@@ -22,7 +22,12 @@ let mapleader = ","
 set path+=**
 
 " Set Python Path
-let g:python3_host_prog = '/usr/local/bin/python3'
+if [ #(uname) = "Linux" ]
+then
+  let g:python3_host_prog = '/bin/python3'
+else
+  let g:python3_host_prog = '/usr/local/bin/python3'
+fi
 
 " Security
 set modelines=0

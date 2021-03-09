@@ -7,10 +7,12 @@ export VISUAL=nvim
 alias e='$EDITOR'
 alias vi='nvim'
 alias vim='nvim'
-alias co='cd ~/coding'
+alias co='cd $HOME/coding'
+alias dl='cd $HOME/Downloads'
 
-alias dl='cd ~/Downloads'
+
+alias econfig='$EDITOR $HOME/dotfiles/nvim/init.vim'
 alias zconfig='$EDITOR $HOME/dotfiles/shell/zshrc && source $HOME/.zshrc'
 alias alconfig='$EDITOR $HOME/dotfiles/shell/aliases && source $HOME/.zshrc'
 
-alias test='echo "hi"'
+alias test='echo "jawn"'

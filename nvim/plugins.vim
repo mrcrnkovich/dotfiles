@@ -7,6 +7,7 @@ call plug#begin()
     Plug 'mattn/emmet-vim'
     Plug 'vim-airline/vim-airline'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'jianmiao/auto-pairs'
 call plug#end()
 
 nmap <C-t> :NERDTreeToggle<CR>
