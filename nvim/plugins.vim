@@ -8,6 +8,7 @@ call plug#begin()
     Plug 'vim-airline/vim-airline'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'jianmiao/auto-pairs'
+    Plug 'xmllint'
 call plug#end()
 
 nmap <C-t> :NERDTreeToggle<CR>

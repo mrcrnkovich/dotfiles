@@ -160,3 +160,5 @@ PATH="$HOME/bin:$PATH"
 # enable VI mode
 bindkey -v
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

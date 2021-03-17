@@ -118,4 +118,16 @@ let g:solarized_termtrans=1
 function VerticalSplitBuffer(buffer)
   execute "vert belowright sb" a:buffer
 endfunction
+
+" Set up Terminal Use
+if has('nvim')
+  tnoremap <Esc> <C-\><C-n>
+  tnoremap <C-v><Esc> <Esc>
+endif
+
+" horizontal split terminal
+
+command hterm = Split | Terminal
+command vterm = VerticalSplitBuffer | Terminal
+
 command -nargs=1 Vbuffer call VerticalSplitBuffer(<f-args>)
