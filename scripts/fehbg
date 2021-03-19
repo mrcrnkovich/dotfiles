@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill '/home/mike/desktop pics/High Sierra.jpg' 
+feh --no-fehbg --bg-fill "$HOME/Images/desktop/High Sierra.jpg" 
