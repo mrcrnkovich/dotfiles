@@ -1,16 +1,14 @@
 call plug#begin()
-    Plug 'Shougo/denite.nvim'
-    Plug 'Olical/conjure', {'tag': 'v4.15.0'}
     Plug 'scrooloose/nerdTree'
-    Plug 'godlygeek/tabular'
-    Plug 'plasticboy/vim-markdown'
-    Plug 'mattn/emmet-vim'
     Plug 'vim-airline/vim-airline'
+    Plug 'godlygeek/tabular'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'jianmiao/auto-pairs'
+    
+    " Use Coc all the time.
+    " Not sure about denite
+    Plug 'Shougo/denite.nvim'
 call plug#end()
 
-nmap <C-t> :NERDTreeToggle<CR>
 
 set completeopt=noinsert,menuone,noselect
 
@@ -175,9 +173,9 @@ function! s:denite_my_settings() abort
 endfunction
 
 " === Nerdtree shorcuts === "
-"  <leader>n - Toggle NERDTree on/off
+"  <C-t> - Toggle NERDTree on/off
 "  <leader>f - Opens current file location in NERDTree
-nmap <leader>n :NERDTreeToggle<CR>
+nmap <C-t> :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
 
 "   <Space> - PageDown
