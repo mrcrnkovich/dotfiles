@@ -37,6 +37,7 @@ set number
 
 " Blink cursor on error instead of beeping
 set visualbell
+set vb t_vb=
 
 " Encoding
 set encoding=utf-8
