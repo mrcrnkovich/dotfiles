@@ -22,13 +22,6 @@ set $mod Mod4
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:DejaVu Sans Mono 12
 
-# Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -37,7 +30,6 @@ bindsym $mod+Return exec i3-sensible-terminal
 
 # launch web browser
 # bindsym $mod+f open https://www.duckduckgo.com
-
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -60,7 +52,6 @@ bindsym $mod+Right focus right
 
 # Lock screen w/ i3 Lock
 bindsym $mod+Shift+l exec i3lock -e --color=0b140b 
-
 bindsym $mod+Shift+s exec /home/mike/.screenlayout/single_screen.sh
 bindsym $mod+Shift+d exec /home/mike/.screenlayout/default_dual.sh
 
@@ -99,7 +90,11 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-#set names of workspaces
+#----------------------------------------------------------------------#
+#                          Set Up workspaces                           #
+#----------------------------------------------------------------------#
+
+# Name workspaces
 set $ws1 "1. Terminal"
 set $ws2 "2. Terminal_2"
 set $ws3 "3. Editor"
@@ -127,6 +122,7 @@ workspace $ws9 output $secondary
 workspace $ws0 output $secondary
 
 # switch to workspace
+
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -138,7 +134,10 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws0
 
-# move focused container to workspace
+#----------------------------------------------------------------------#
+#                 move focused container to workspace                  #
+#----------------------------------------------------------------------#
+
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
@@ -243,5 +242,4 @@ exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
 
 
 exec ~/.fehbg  && picom -b --vsync
-exec sleep(0.5)
 exec redshift -t 6500:3500 -l 39.96:-75.17

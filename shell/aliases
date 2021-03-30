@@ -1,15 +1,11 @@
 # script to contain all my aliases
 
-
 export EDITOR=nvim
 export VISUAL=nvim
 
 alias e='$EDITOR'
-alias vi='nvim'
-alias vim='nvim'
 alias co='cd $HOME/coding'
 alias dl='cd $HOME/Downloads'
-
 
 alias econfig='$EDITOR $HOME/dotfiles/nvim/init.vim'
 alias zconfig='$EDITOR $HOME/dotfiles/shell/zshrc && source $HOME/.zshrc'

@@ -1,4 +1,3 @@
-
 @checkNone
 " Don't try to be vi compatible
 set nocompatible
@@ -36,7 +35,6 @@ set modelines=0
 set relativenumber
 set number
 
-" Show file stats
 " Blink cursor on error instead of beeping
 set visualbell
 
@@ -57,7 +55,7 @@ set noshiftround
 set scrolloff=3
 set backspace=indent,eol,start
 set matchpairs+=<:> " use % to jump between pairs
-runtime! macros/matchit.vim
+" runtime! macros/matchit.vim
 
 " Move up/down editor lines
 nnoremap j gj
@@ -93,15 +91,8 @@ set smartcase
 set showmatch
 map <leader><space> :let @/=''<cr> " clear search
 
-" Remap help key.
-inoremap <F1> <ESC>:set invfullscreen<CR>a
-nnoremap <F1> :set invfullscreen<CR>
-vnoremap <F1> :set invfullscreen<CR>
+" Remap CAPSLOCK key.
 inoremap <CAPSLOCK> <ESC>
-
-
-" Formatting
-map <leader>q gqip
 
 " Visualize tabs and newlines
 " Use your leader key + l to toggle on/off
@@ -114,20 +105,14 @@ set background=dark
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 
-" Function Vertical Split Buffer
-function VerticalSplitBuffer(buffer)
-  execute "vert belowright sb" a:buffer
-endfunction
-
 " Set up Terminal Use
 if has('nvim')
   tnoremap <Esc> <C-\><C-n>
   tnoremap <C-v><Esc> <Esc>
 endif
 
-" horizontal split terminal
-
-command hterm = Split | Terminal
-command vterm = VerticalSplitBuffer | Terminal
-
-command -nargs=1 Vbuffer call VerticalSplitBuffer(<f-args>)
+" Function Vertical Split Buffer
+function VerticalSplitBuffer(buffer)
+  execute "vert belowright sb" a:buffer
+endfunction
+command -nargs=1 Vbuf call VerticalSplitBuffer(<f-args>)
