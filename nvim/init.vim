@@ -5,8 +5,13 @@ set nocompatible
 " Helps force plugins to load correctly when it is turned back on below
 filetype off
 
-"Load plugins here (pathogen or vundle)
-source $HOME/.config/nvim/plugins.vim
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+source $HOME/dotfiles/nvim/plugins.vim
 
 " Turn on syntax highlighting
 syntax on
@@ -105,12 +110,6 @@ set t_Co=256
 set background=dark
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
-
-" Set up Terminal Use
-if has('nvim')
-  tnoremap <Esc> <C-\><C-n>
-  tnoremap <C-v><Esc> <Esc>
-endif
 
 " Function Vertical Split Buffer
 function VerticalSplitBuffer(buffer)
