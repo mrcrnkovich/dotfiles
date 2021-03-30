@@ -61,7 +61,6 @@ set noshiftround
 set scrolloff=3
 set backspace=indent,eol,start
 set matchpairs+=<:> " use % to jump between pairs
-" runtime! macros/matchit.vim
 
 " Move up/down editor lines
 nnoremap j gj
