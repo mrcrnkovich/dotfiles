@@ -1,2 +1,2 @@
 #! /bin/sh
-feh --no-fehbg --bg-fill "./background.jpg" 
+feh --no-fehbg --bg-fill "$HOME/dotfiles/X11/background.jpg"
