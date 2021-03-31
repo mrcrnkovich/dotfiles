@@ -81,14 +81,8 @@ bindsym $mod+e layout toggle split
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
-# bindsym $mod+space focus mode_toggle
-
 # focus the parent container
 bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
 
 #----------------------------------------------------------------------#
 #                          Set Up workspaces                           #
@@ -233,7 +227,7 @@ bar {
 }
 
 #set gaps
-gaps inner 10
+gaps inner 0
 
 # swap caps lock and escape
 exec_always --no-startup-id xmodmap -e "clear lock"
