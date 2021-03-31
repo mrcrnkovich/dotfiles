@@ -1,2 +1,2 @@
-#!/bin/sh
-feh --no-fehbg --bg-fill "$HOME/Images/desktop/High Sierra.jpg" 
+#! /bin/sh
+feh --no-fehbg --bg-fill "./background.jpg" 
