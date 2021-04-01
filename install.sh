@@ -8,10 +8,10 @@ cd $HOME
 #----------------------------------------------------------------------#
 
 function link {
-  dest="${HOME}/${1}"
+  dest="${HOME}/${2}"
 
   echo "Creating new symlink: ${dest}"
-  ln -sf ${dotfilesDir}/${2} ${dest}
+  ln -sf ${dotfilesDir}/${1} ${dest}
 }
 
 function linkBin {
@@ -27,14 +27,14 @@ function linkBin {
 #                     destination dotfile_location                     #
 #----------------------------------------------------------------------#
 
-link   '.vimrc'                     'shell/vimrc'
-link   '.zshrc'                     'shell/zshrc'
-link   '.xinitrc'                   '/X11/xinitrc'
-link   '.Xresources'                '/X11/Xresources'
-link   '.config/i3/config'          'config/i3/config'
-link   '.config/i3status/config'    'config/i3status/config'
-link   '.config/picom.conf'         'config/picom.conf'
-link   '.config/rofi/config.rasi'   'config/rofi/config.rasi'
+link 'home/vimrc'                '.vimrc'
+link 'home/zshrc'                '.zshrc'
+link 'home/xinitrc'              '.xinitrc'
+link 'home/Xresources'           '.Xresources'
+link 'config/i3/config'          '.config/i3/config'
+link 'config/i3status/config'    '.config/i3status/config'
+link 'config/picom.conf'         '.config/picom.conf'
+link 'config/rofi/config.rasi'   '.config/rofi/config.rasi'
 
 #----------------------------------------------------------------------#
 #                       link all user bin files                        #
