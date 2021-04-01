@@ -1,0 +1,83 @@
+! **************************
+!      Color Settings     
+! ***************************
+
+foreground: #00cc00
+foreground_bold: #a8a19f
+cursor: #a8a19f
+
+! Black
+color0: #121212
+! Dark Gray
+color8: #8a8a8a
+
+! Red
+color1: #d70000
+! Bright Red
+color9: #ff0000
+
+! Green
+color2: #5fd700
+! Green
+color10: #5fd700
+
+! Yellow
+color3: #e5c365
+! Light Yellow
+color11: #ffd75f
+
+! Dark Blue
+color4: #141f2e
+! Blue
+color12: #0087ff
+
+! Dark Magenta
+color5: #5f00ff
+! Magenta
+color13: #5f00ff
+
+! Light Blue
+color6: #507cb8
+! Light Blue
+color14: #507cb8
+
+! Light Gray
+color7: #c0c0c0
+! White
+color15: #ffffff
+
+! ***************************
+!       RXVT Terminal      
+! ***************************
+Xft.dpi: 192
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.autohint: false
+
+URxvt.transparent: true
+URxvt.shading:60
+URxvt.background: [95]#000000
+URxvt.intensityStyles: true
+URxvt*foreground: White
+
+URxvt.cursorColor: #ffffff
+URxvt.cursorBlink: 1
+URxvt.cursorUnderline: 1
+
+font pango:
+URxvt.font: xft:terminus:bold:size=14
+URxvt.letterSpace: -1
+
+! URxvt.depth: 32
+
+URxvt*color4: RoyalBlue
+URxvt*color12: RoyalBlue
+
+URxvt.borderless: true
+URxvt*scrollBar: false
+URxvt*scrollBar_right: false
+
+!  scrollback buffer lines - 65535 is max on most machines (64 is default)
+URxvt*saveLines: 1024 
