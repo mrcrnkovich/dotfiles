@@ -67,7 +67,7 @@ URxvt.cursorBlink: 1
 URxvt.cursorUnderline: 1
 
 font pango:
-URxvt.font: xft:terminus:bold:size=14
+URxvt.font: xft:Source Code Variable:size=12
 URxvt.letterSpace: -1
 
 ! URxvt.depth: 32

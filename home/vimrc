@@ -17,7 +17,7 @@ call plug#begin()
     Plug 'vim-airline/vim-airline'
     Plug 'godlygeek/tabular'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'junegunn/fzf.vim', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'    
 call plug#end()
 
