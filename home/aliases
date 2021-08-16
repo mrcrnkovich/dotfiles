@@ -23,4 +23,4 @@ alias linode_ssh='ssh mike@172.104.213.172'
 alias wifi-options="nmcli device wifi list"
 alias wifi-connect="nmcli device wifi connect"
 alias pi_ssh="ssh pi@192.168.1.7"
-alias fuck="sudo fbset -xres 2560  -yres 1600"
+alias setTTY="sudo fbset -xres 2560  -yres 1600 && setfont ter-i28b"

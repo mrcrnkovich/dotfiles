@@ -20,16 +20,14 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 12
+font pango:Adobe Code Variable 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
-
-# launch web browser
-# bindsym $mod+f open https://www.duckduckgo.com
+# bindsym $mod+Return exec st
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -38,11 +36,11 @@ bindsym $mod+Shift+q kill
 bindsym $mod+space exec --no-startup-id rofi -show drun
 bindsym $mod+s exec --no-startup-id spotify
 
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+# change focus vim bindings
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -55,15 +53,15 @@ bindsym $mod+Shift+l exec i3lock -e --color=0b140b
 bindsym $mod+Shift+s exec /home/mike/.screenlayout/single_screen.sh
 bindsym $mod+Shift+d exec /home/mike/.screenlayout/default_dual.sh
 
+# change backlight
+bindsym F1 exec xbacklight -dec 5
+bindsym F2 exec xbacklight -inc 5
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-
-# split in horizontal orientation
-bindsym $mod+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -72,10 +70,7 @@ bindsym $mod+v split v
 bindsym $mod+shift+f fullscreen toggle
 bindsym $mod+f exec firefox
 
-
 # change container layout (stacked, tabbed, toggle split)
-# bindsym $mod+s layout stacking
-# bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -89,16 +84,16 @@ bindsym $mod+a focus parent
 #----------------------------------------------------------------------#
 
 # Name workspaces
-set $ws1 "1. Terminal"
-set $ws2 "2. Terminal_2"
-set $ws3 "3. Editor"
-set $ws4 "4. Spotify"
-set $ws5 "5. Python"
-set $ws6 "6. Firefox"
-set $ws7 "7. Other"
-set $ws8 "8. Other"
-set $ws9 "9. Other"
-set $ws0 "0. TBD"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws0 "0"
 
 set $primary "eDP1"
 set $secondary "DP2"
@@ -183,10 +178,11 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3blocks
+    status_command i3blocks
 	position top
-	workspace_buttons no
+	workspace_buttons yes
 	i3bar_command i3bar --transparency
+
 
 	colors {
         	background #00000090
@@ -201,31 +197,6 @@ bar {
     }
 }
 
-
-bar {
-	status_command i3status
-	mode hide
-	position bottom
-	workspace_buttons yes
-	tray_output primary
-	tray_padding 5
-	i3bar_command i3bar --transparency
-
-	colors {
-        	background #00000080
-        	statusline #ffffff
-        	separator #666666
-
-        	focused_workspace  #4c7899 #285577 #ffffff
-        	active_workspace   #333333 #5f676a #ffffff
-        	inactive_workspace #333333 #222222 #888888
-        	urgent_workspace   #2f343a #900000 #ffffff
-        	binding_mode       #2f343a #900000 #ffffff
-    }
-	
-
-}
-
 #set gaps
 gaps inner 2
 
@@ -233,7 +204,6 @@ gaps inner 2
 exec_always --no-startup-id xmodmap -e "clear lock"
 exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
 exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
-
 
 exec ~/.fehbg  && picom -b --vsync
 exec redshift -t 6500:3500 -l 39.96:-75.17

@@ -1,30 +1,11 @@
 @checkNone
-" Don't try to be vi compatible
-set nocompatible
+set nocompatible " Don't try to be vi compatible
+syntax on " Turn on syntax highlighting
 
 " Helps force plugins to load correctly when it is turned back on below
 filetype off
 
-if empty(glob('$HOME/.vim/autoload/plug.vim'))
-  silent execute '!curl -fLo "$HOME/.vim/autoload/plug.vim"'
-        \ ' --create-dirs'
-        \ '"https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-call plug#begin()
-    Plug 'scrooloose/nerdTree'
-    Plug 'vim-airline/vim-airline'
-    Plug 'godlygeek/tabular'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'    
-call plug#end()
-
 set completeopt=noinsert,menuone,noselect
-
-" Turn on syntax highlighting
-syntax on
 
 " For plugins to load correctly
 filetype plugin indent on
@@ -39,7 +20,7 @@ set path+=**
 set modelines=0
 
 " Show line numbers
-set relativenumber
+" set relativenumber
 set number
 
 " Blink cursor on error instead of beeping
@@ -96,10 +77,11 @@ set incsearch
 set ignorecase
 set smartcase
 set showmatch
-map <leader><space> :let @/=''<cr> " clear search
 
-" Remap CAPSLOCK key.
+map <leader><space> :let @/=''<cr> " clear search
 inoremap <CAPSLOCK> <ESC>
+nmap <leader>t :NERDTreeToggle<CR>
+nmap <leader>f :Files<CR>
 
 " Visualize tabs and newlines
 " Use your leader key + l to toggle on/off
@@ -112,41 +94,25 @@ set background=dark
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 
-" Function Vertical Split Buffer
-function VerticalSplitBuffer(buffer)
-  execute "vert belowright sb" a:buffer
-endfunction
-command -nargs=1 Vbuf call VerticalSplitBuffer(<f-args>)
-
-" ================================ Coc.nvim =================================== "
+" ==== Coc.nvim === "
 " use <tab> for trigger completion and navigate to next complete item
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
-
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-
+" function! s:check_back_space() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~ '\s'
+" endfunction
+" 
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
+" 
 "Close preview window when completion is done.
-autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-
-
-" ============================================================================ "
-" ===                             KEY MAPPINGS                             === "
-" ============================================================================ "
+" autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+" === coc.nvim === "
+" nmap <silent> <leader>dd <Plug>(coc-definition)
+" nmap <silent> <leader>dr <Plug>(coc-references)
+" nmap <silent> <leader>dj <Plug>(coc-implementation)
 
 " === Nerdtree shorcuts === "
 "  <C-t> - Toggle NERDTree on/off
 "  <leader>f - Opens current file location in NERDTree
-nmap <C-t> :NERDTreeToggle<CR>
-nmap <leader>f :NERDTreeFind<CR>
-
-" === coc.nvim === "
-nmap <silent> <leader>dd <Plug>(coc-definition)
-nmap <silent> <leader>dr <Plug>(coc-references)
-nmap <silent> <leader>dj <Plug>(coc-implementation)
-
-"
