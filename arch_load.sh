@@ -15,8 +15,7 @@ pacstrap /mnt base base-devel linux linux-firmware vim openssh grub
 locale-gen
 echo "LANG=en_US.UTF_8"   >    /etc/locale.conf
 
-useradd $1
-
+# move this to the install script
 pacman -S i3-gaps zsh ranger feh
 git clone https://github.com/mrcrnkovich/dotfiles.git
 cd dotfiles && ./install.sh
