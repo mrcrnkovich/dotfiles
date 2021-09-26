@@ -11,6 +11,7 @@ function link {
   dest="${HOME}/${2}"
 
   echo "Creating new symlink: ${dest}"
+  # need to mkdir for missing dirs
   ln -sf ${dotfilesDir}/${1} ${dest}
 }
 
@@ -43,14 +44,15 @@ link 'config/rofi/config.rasi'   '.config/rofi/config.rasi'
 #----------------------------------------------------------------------#
 
 linkBin
-mkdir ~/.vim/pack/plugins/start
+mkdir -p ~/.vim/pack/plugins/start
 cd ~/.vim/pack/plugins/start
 # auto-pairs
 # fzf.vim
-echo "nerdTree"
-git clone https://github.com/preservim/nerdtree
-
+# coc-vim
 # tabular
-echo "vim-airline"
-git clone https://github.com/vim-airline/vim-airline
+echo "Installing Vim NerdTree"
+git clone https://github.com/preservim/nerdtree.git
+
+echo "Installing Vim vim-airline"
+git clone https://github.com/vim-airline/vim-airline.git
 cd $HOME
