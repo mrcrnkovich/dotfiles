@@ -43,3 +43,14 @@ link 'config/rofi/config.rasi'   '.config/rofi/config.rasi'
 #----------------------------------------------------------------------#
 
 linkBin
+mkdir ~/.vim/pack/plugins/start
+cd ~/.vim/pack/plugins/start
+# auto-pairs
+# fzf.vim
+echo "nerdTree"
+git clone https://github.com/preservim/nerdtree
+
+# tabular
+echo "vim-airline"
+git clone https://github.com/vim-airline/vim-airline
+cd $HOME
