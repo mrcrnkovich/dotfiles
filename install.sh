@@ -49,7 +49,6 @@ cd ~/.vim/pack/plugins/start
 # auto-pairs
 # fzf.vim
 # coc-vim
-# tabular
 echo "Installing Vim NerdTree"
 git clone https://github.com/preservim/nerdtree.git
 
