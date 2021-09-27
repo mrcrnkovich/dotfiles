@@ -31,7 +31,8 @@ function linkBin {
 link 'home/vimrc'                '.vimrc'
 link 'home/zshrc'                '.zshrc'
 
-if [[ $OSTYPE == 'linux-gnu' ]] then
+if [[ $OSTYPE == 'linux-gnu' ]]
+then
     link 'home/xinitrc'              '.xinitrc'
     link 'home/Xresources'           '.Xresources'
     link 'home/background.jpg'       '.background.jpg'
