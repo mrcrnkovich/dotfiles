@@ -1,6 +1,10 @@
 @checkNone
 set nocompatible " Don't try to be vi compatible
 syntax on " Turn on syntax highlighting
+" set background=light
+" colorscheme solarized
+" for urxvt
+" let g:solarized_termtrans=1
 
 " Helps force plugins to load correctly when it is turned back on below
 filetype off
@@ -88,11 +92,6 @@ nmap <leader>f :Files<CR>
 set listchars=tab:▸\ ,eol:¬
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
-" Color scheme (terminal)
-set t_Co=256
-set background=dark
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
 
 " ==== Coc.nvim === "
 " use <tab> for trigger completion and navigate to next complete item
@@ -112,7 +111,3 @@ let g:solarized_termtrans=1
 " nmap <silent> <leader>dd <Plug>(coc-definition)
 " nmap <silent> <leader>dr <Plug>(coc-references)
 " nmap <silent> <leader>dj <Plug>(coc-implementation)
-
-" === Nerdtree shorcuts === "
-"  <C-t> - Toggle NERDTree on/off
-"  <leader>f - Opens current file location in NERDTree

@@ -30,6 +30,7 @@ function linkBin {
 
 link 'home/vimrc'                '.vimrc'
 link 'home/zshrc'                '.zshrc'
+link 'home/tmux.conf'            '.tmux.conf'
 
 if [[ $OSTYPE == 'linux-gnu' ]]
 then
@@ -53,9 +54,16 @@ cd ~/.vim/pack/plugins/start
 # auto-pairs
 # fzf.vim
 # coc-vim
+echo "Installing Vim-FuGITive"
+git clone https://github.com/tpope/vim-fugitive.git
+
 echo "Installing Vim NerdTree"
 git clone https://github.com/preservim/nerdtree.git
 
 echo "Installing Vim vim-airline"
 git clone https://github.com/vim-airline/vim-airline.git
+
+echo "installing solarized colorscheme"
+git clone https://github.com/altercation/vim-colors-solarized.git
+
 cd $HOME
