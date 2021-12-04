@@ -55,11 +55,13 @@ bindsym $mod+Shift+d exec /home/mike/.screenlayout/default_dual.sh
 
 # change backlight
 # bindsym XF86AudioMute
-bindsym XF86AudioMute exec amixer -c 0 set Master 100dB-
-bindsym XF86AudioLowerVolume exec amixer -c 0 set Master 2dB-
-bindsym XF86AudioRaiseVolume exec amixer -c 0 set Master 2dB+
+bindsym XF86AudioMute exec amixer set Master 100dB-
+bindsym XF86AudioLowerVolume exec amixer set Master 5%-
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86Display exec i3lock --image=/home/mike/.dotfiles/lockscreen.png
+bindsym XF86WLAN exec toggle_wifi
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
