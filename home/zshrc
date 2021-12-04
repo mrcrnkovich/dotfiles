@@ -120,6 +120,10 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 #                  Add Path Variables                     #
 #---------------------------------------------------------#
 
+mygc(){
+    git clone git@github.com:mrcrnkovich/$1.git
+}
+
 PATH="$HOME/.local/bin:$PATH"
 
 # enable VI mode
