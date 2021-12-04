@@ -3,13 +3,13 @@ separator=true
 separator_block_width=15
 
 [wifi]
-command=nmcli device status | gawk 'FNR == 2 {printf "%s\n", $4}'
+command=iwctl station wlan0 show | grep "Connected network" | tr -s " "
 color=#5fd700
 interval=5
 separator=false
 
 [ip]
-command=hostname -i
+command=iwctl station wlan0 show | grep "IPv4" | tr -s " "
 interval=once
 color=#5fd700
 
@@ -23,8 +23,8 @@ label=CPU:
 interval=10
 
 [temperature]
-command=T=$(cat /sys/class/thermal/thermal_zone0/temp); echo $(( $T / 1000 ))°C
-label=💻 
+command=T=$(cat /sys/class/thermal/thermal_zone0/temp); echo $(( $T / 1000 )) °C
+label= 💻 
 interval=10
 separator=true
 
@@ -35,12 +35,12 @@ interval=5
 separator=true
 
 [time]
-command= date '+%H:%M'
+command= date ' +%H:%M '
 label=🕓 
 interval=10
 separator=false
 
 [day]
-command= date '+%a %b %e, %Y';[[ -z "${BLOCK_BUTTON}" ]] || gsimplecal &
+command= date '+%a %Y %b, %e';[[ -z "${BLOCK_BUTTON}" ]] || gsimplecal &
 interval=30
 separator=true

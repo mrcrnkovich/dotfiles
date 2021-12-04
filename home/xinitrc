@@ -6,7 +6,7 @@ xset r rate 270 30
 xrdb ~load ~/.Xresources
 
 # Scale back screen size
-xrandr --output eDP1 --scale 1.15x1.15
+xrandr --output eDP1 --scale 1x1
 
 
 exec i3

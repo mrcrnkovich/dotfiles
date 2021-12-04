@@ -54,7 +54,7 @@ bindsym $mod+Shift+s exec /home/mike/.screenlayout/single_screen.sh
 bindsym $mod+Shift+d exec /home/mike/.screenlayout/default_dual.sh
 
 # change backlight
-bindsym F1 exec xbacklight -dec 5
+# bindsym XF86AudioMute
 bindsym F2 exec xbacklight -inc 5
 
 # alternatively, you can use the cursor keys:
@@ -181,6 +181,7 @@ bar {
     status_command i3blocks
 	position top
 	workspace_buttons yes
+    workspace_min_width 50
 	i3bar_command i3bar --transparency
 
 
@@ -198,7 +199,7 @@ bar {
 }
 
 #set gaps
-gaps inner 2
+gaps inner 5
 
 # swap caps lock and escape
 exec_always --no-startup-id xmodmap -e "clear lock"

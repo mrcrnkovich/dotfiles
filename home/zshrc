@@ -90,6 +90,12 @@ export LANG=en_US.UTF-8
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+    exec startx
+fi
+
+
 #---------------------------------------------------------#
 #                      FZF FUNCTIONS                      #
 #---------------------------------------------------------#                      

@@ -20,7 +20,7 @@ function linkBin {
     
     for file in $(ls "$dotfilesDir/bin/"); do
         echo "Linking /Bin: $file"  
-        ln -sf "$dotfilesDir/bin/$file" "${HOME}/bin/${file%.*}"
+        ln -sf "$dotfilesDir/bin/$file" "${HOME}/.local/bin/${file%.*}"
     done
 }
 
