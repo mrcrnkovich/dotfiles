@@ -3,6 +3,9 @@
 dotfilesDir=$(pwd)
 cd $HOME
 
+echo "Setting dotfiles @: $dotfilesDir"
+echo "Home dir @: $HOME"
+
 #----------------------------------------------------------------------#
 #                           Helper Functions                           #
 #----------------------------------------------------------------------#
@@ -39,6 +42,10 @@ then
     link 'home/background.jpg'       '.background.jpg'
     link 'home/fehbg'                '.fehbg'
     link 'config/i3/config'          '.config/i3/config'
+    link 'config/i3blocks/config'    '.config/i3blocks/config'
+    link 'config/i3blocks/battery'   '.config/i3blocks/battery'
+    link 'config/i3blocks/ip'        '.config/i3blocks/ip'
+    link 'config/i3blocks/scripts/memory.sh'  '.config/i3blocks/scripts/memory.sh'
     link 'config/i3status/config'    '.config/i3status/config'
     link 'config/picom.conf'         '.config/picom.conf'
     link 'config/rofi/config.rasi'   '.config/rofi/config.rasi'
