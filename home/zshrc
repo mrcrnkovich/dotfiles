@@ -120,7 +120,7 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 #                  Add Path Variables                     #
 #---------------------------------------------------------#
 
-PATH="$HOME/bin:$PATH"
+PATH="$HOME/.local/bin:$PATH"
 
 # enable VI mode
 bindkey -v
