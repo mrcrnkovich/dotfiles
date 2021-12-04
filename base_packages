@@ -4,6 +4,7 @@ alsa-utils
 autoconf
 automake
 base
+bc
 bison
 bluez
 bluez-utils
