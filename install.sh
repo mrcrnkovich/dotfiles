@@ -19,11 +19,12 @@ function link {
 }
 
 function linkBin {
-    mkdir -p $HOME/bin
+    binPath="$HOME/.local/bin"
+    mkdir -p $binPath
     
     for file in $(ls "$dotfilesDir/bin/"); do
         echo "Linking /Bin: $file"  
-        ln -sf "$dotfilesDir/bin/$file" "${HOME}/.local/bin/${file%.*}"
+        ln -sf "$dotfilesDir/bin/$file" "$binPath/${file%.*}"
     done
 }
 
