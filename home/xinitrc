@@ -1,7 +1,6 @@
 # Adjust keyboard typematic delay and rate
 xset r rate 270 30
 
-
 # Merge & load Config
 xrdb ~load ~/.Xresources
 

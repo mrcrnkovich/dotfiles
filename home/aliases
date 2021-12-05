@@ -1,5 +1,6 @@
 # script to contain all my aliases
 
+source ./aliases.private
 export EDITOR=vim
 export VISUAL=vim
 
@@ -7,20 +8,15 @@ alias e='$EDITOR'
 alias co='cd $HOME/coding'
 alias dl='cd $HOME/Downloads'
 
-alias econfig='$EDITOR $HOME/dotfiles/nvim/init.vim'
-alias zconfig='$EDITOR $HOME/dotfiles/shell/zshrc && source $HOME/.zshrc'
-alias alconfig='$EDITOR $HOME/dotfiles/shell/aliases && source $HOME/.zshrc'
+alias econfig='$EDITOR $HOME/.dotfiles/nvim/init.vim'
+alias zconfig='$EDITOR $HOME/.dotfiles/shell/zshrc && source $HOME/.zshrc'
+alias alconfig='$EDITOR $HOME/.dotfiles/shell/aliases && source $HOME/.zshrc'
 
 alias f="dotnet fsi"
-
 alias crm='cd ~/coding/python/CRM-App-Project && source venv/bin/activate'
-alias crmDB='psql -h 172.104.213.172 -p 5432 -U postgres'
 
-alias update="sudo pacman -Syu && yay -Syu && systemctl reboot"
+alias update="sudo pacman -Syu && paccache -rk 1 && systemctl reboot"
 alias xset-off='xset s off && xset -dpms'
 alias xset-on='xset s on && xset +dpms'
-alias linode_ssh='ssh mike@172.104.213.172'
-alias wifi-options="nmcli device wifi list"
-alias wifi-connect="nmcli device wifi connect"
-alias pi_ssh="ssh pi@192.168.1.7"
-alias setTTY="sudo fbset -xres 2560  -yres 1600 && setfont ter-i28b"
+alias wifi-options="iwctl device wifi list"
+alias wifi-connect="iwctl device wifi connect"
