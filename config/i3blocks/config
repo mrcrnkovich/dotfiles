@@ -1,6 +1,7 @@
 # Global properties
+padding=5
 separator=true
-separator_block_width=15
+separator_block_width=20
 
 [wifi]
 command=iwctl station wlan0 show | grep "Connected network" | tr -s " "
@@ -12,6 +13,16 @@ separator=false
 command=iwctl station wlan0 show | grep "IPv4" | tr -s " "
 interval=once
 color=#5fd700
+
+[day]
+command= date '+%a %b %e, %Y';[[ -z "${BLOCK_BUTTON}" ]] || gsimplecal &
+interval=30
+separator=false
+
+[time]
+command= date '+%H:%M'
+label=🕓 
+interval=10
 
 [memory]
 label=MEM: 
@@ -26,21 +37,8 @@ interval=10
 command=T=$(cat /sys/class/thermal/thermal_zone0/temp); echo $(( $T / 1000 )) °C
 label= 💻 
 interval=10
-separator=true
 
 [battery]
 command=acpi | gawk '{$1=""; $2=""; print}'
 label=
 interval=5
-separator=true
-
-[time]
-command= date ' +%H:%M '
-label=🕓 
-interval=10
-separator=false
-
-[day]
-command= date '+%a %Y %b, %e';[[ -z "${BLOCK_BUTTON}" ]] || gsimplecal &
-interval=30
-separator=true

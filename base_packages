@@ -1,4 +1,5 @@
 acpi
+alacritty
 alsa-firmware
 alsa-utils
 autoconf
@@ -9,7 +10,7 @@ bison
 bluez
 bluez-utils
 docker
-fakeroot
+docker-compose
 feh
 firefox
 flex
@@ -21,6 +22,7 @@ jq
 lxappearance
 make
 openssh
+pacman-contrib
 patch
 picom
 pkgconf
@@ -29,6 +31,9 @@ ranger
 rofi
 sof-firmware
 sof-tools
+ttf-fira-code
+ttf-font-awesome
+ttf-opensans
 which
 xf86-video-intel
 xf86-video-vesa
@@ -70,3 +75,5 @@ xorg-xvinfo
 xorg-xwayland
 xorg-xwd
 xorg-xwud
+yarn
+zoom

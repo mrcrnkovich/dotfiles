@@ -1,6 +1,6 @@
 # script to contain all my aliases
 
-source ./aliases.private
+source /home/mike/.dotfiles/home/aliases.private
 export EDITOR=vim
 export VISUAL=vim
 
