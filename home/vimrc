@@ -1,21 +1,18 @@
 @checkNone
-set nocompatible " Don't try to be vi compatible
-syntax on " Turn on syntax highlighting
-" for urxvt
-" let g:solarized_termtrans=1
-
-" Helps force plugins to load correctly when it is turned back on below
-filetype off
-
+syntax on
+set nocompatible
+set number
+set encoding=utf-8
 set completeopt=noinsert,menuone,noselect
 
-" For plugins to load correctly
-filetype plugin indent on
+let mapleader = ","
 
+" Helps force plugins to load correctly when it is turned back on below
+" filetype off
+" For plugins to load correctly
+" filetype plugin indent on
 " set background=dark
 " autocmd vimenter * ++nested colorscheme solarized8
-" Pick a leader key
-let mapleader = ","
 
 " Search down into subfolders, tab-completion
 set path+=**
@@ -23,16 +20,9 @@ set path+=**
 " Security
 set modelines=0
 
-" Show line numbers
-" set relativenumber
-set number
-
 " Blink cursor on error instead of beeping
 set visualbell
 set vb t_vb=
-
-" Encoding
-set encoding=utf-8
 
 " Whitespace
 set wrap

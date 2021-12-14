@@ -5,7 +5,7 @@ xset r rate 270 30
 xrdb ~load ~/.Xresources
 
 # Scale back screen size
-xrandr --output eDP1 --scale 1x1
+xrandr --output eDP1
 
-
+bluetoothctl power on
 exec i3

@@ -7,24 +7,6 @@ Xft.hinting: true
 Xft.hintstyle: hintslight
 Xft.autohint: false
 
-URxvt.transparent: true
-URxvt.shading:60
-URxvt.intensityStyles: true
-URxvt*foreground: White
-
-URxvt.cursorColor: #ffffff
-URxvt.cursorBlink: 1
-URxvt.cursorUnderline: 1
-
-font pango:
-URxvt.font: xft:Source Code Variable:size=12
-URxvt.letterSpace: -1
-
-URxvt.borderless: true
-URxvt*scrollBar: false
-URxvt*scrollBar_right: false
-URxvt*saveLines: 1024
-
 *background:   [97]#282a36
 *foreground:   #eff0eb
 *cursorColor:  #9aedfe
