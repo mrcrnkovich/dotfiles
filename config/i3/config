@@ -20,7 +20,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Adobe Code Variable 12
+font pango: Fira Code 12 Bold
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -90,12 +90,12 @@ bindsym $mod+a focus parent
 #----------------------------------------------------------------------#
 
 # Name workspaces
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
+set $ws1 "1  "
+set $ws2 "2  "
+set $ws3 "3  "
+set $ws4 "4  "
+set $ws5 "5  "
+set $ws6 "6  "
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -108,14 +108,14 @@ set $hdmi "HDMI1"
 # set workspaces to monitor
 workspace $ws1 output $hdmi
 workspace $ws2 output $hdmi
-workspace $ws3 output $primary
+workspace $ws3 output $hdmi
 workspace $ws4 output $hdmi
 workspace $ws5 output $hdmi
 workspace $ws6 output $secondary
 workspace $ws7 output $secondary
 workspace $ws8 output $secondary
 workspace $ws9 output $secondary
-workspace $ws0 output $secondary
+workspace $ws0 output $primary
 
 # switch to workspace
 
@@ -193,15 +193,15 @@ bar {
 
 
 	colors {
-        	background #00000090
-        	statusline #ffffff
+        	background #00000099
+        	statusline #eaeaea
         	separator #666666
 
-        	focused_workspace  #4c7899 #285577 #ffffff
-        	active_workspace   #333333 #5f676a #ffffff
-        	inactive_workspace #333333 #222222 #888888
-        	urgent_workspace   #2f343a #900000 #ffffff
-        	binding_mode       #2f343a #900000 #ffffff
+        	focused_workspace  #f0c674 #f0c674 #666666
+        	active_workspace   #b294bb #b294bb #eaeaea
+        	inactive_workspace #1d1f21 #1d1f21 #eaeaea
+        	urgent_workspace   #1d1f21 #1d1f21 #eaeaea
+        	binding_mode       #1d1f21 #1d1f21 #eaeaea
     }
 }
 

@@ -2,6 +2,7 @@
 syntax on
 set nocompatible
 set number
+set relativenumber
 set encoding=utf-8
 set completeopt=noinsert,menuone,noselect
 
@@ -21,16 +22,18 @@ set path+=**
 set modelines=0
 
 " Blink cursor on error instead of beeping
-set visualbell
+set noerrorbells
 set vb t_vb=
 
 " Whitespace
-set wrap
-set textwidth=88
+set hidden
+set nowrap
+set textwidth=80
+set colorcolumn=80
 set formatoptions=tcqrn1
 set tabstop=4
-set shiftwidth=2
 set softtabstop=4
+set shiftwidth=4
 set expandtab
 set noshiftround
 
@@ -43,9 +46,6 @@ set matchpairs+=<:> " use % to jump between pairs
 nnoremap j gj
 nnoremap k gk
 
-" Allow hidden buffers
-set hidden
-
 " Quick window switching
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
@@ -55,6 +55,11 @@ nmap <C-x> <C-w>x
 
 " Rendering
 set ttyfast
+
+set nobackup
+set noswapfile
+set undodir=~/.vim/undodir
+set undofile
 
 " Status bar
 set laststatus=2
@@ -70,6 +75,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+set incsearch
 set showmatch
 
 map <leader><space> :let @/=''<cr> " clear search
