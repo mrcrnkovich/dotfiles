@@ -1,6 +1,6 @@
-@checkNone
 syntax on
 set nocompatible
+set path+=**
 set number
 set relativenumber
 set encoding=utf-8
@@ -8,28 +8,13 @@ set completeopt=noinsert,menuone,noselect
 
 let mapleader = ","
 
-" Helps force plugins to load correctly when it is turned back on below
-" filetype off
-" For plugins to load correctly
-" filetype plugin indent on
-" set background=dark
-" autocmd vimenter * ++nested colorscheme solarized8
-
-" Search down into subfolders, tab-completion
-set path+=**
-
-" Security
 set modelines=0
-
-" Blink cursor on error instead of beeping
 set noerrorbells
 set vb t_vb=
-
-" Whitespace
 set hidden
 set nowrap
 set textwidth=80
-set colorcolumn=80
+" set colorcolumn=88
 set formatoptions=tcqrn1
 set tabstop=4
 set softtabstop=4
@@ -53,9 +38,7 @@ nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 nmap <C-x> <C-w>x
 
-" Rendering
 set ttyfast
-
 set nobackup
 set noswapfile
 set undodir=~/.vim/undodir
@@ -79,9 +62,25 @@ set incsearch
 set showmatch
 
 map <leader><space> :let @/=''<cr> " clear search
-inoremap <CAPSLOCK> <ESC>
+inoremap jj <ESC>
 nmap <leader>t :NERDTreeToggle<CR>
 nmap <leader>f :Files<CR>
+
+" Helps force plugins to load correctly when it is turned back on below
+" For plugins to load correctly
+filetype off
+call plug#begin()
+Plug 'preservim/nerdtree'
+Plug 'tpope/fugitive'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
+
+filetype plugin indent on
+
 
 " Visualize tabs and newlines
 " Use your leader key + l to toggle on/off

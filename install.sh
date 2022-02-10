@@ -68,14 +68,6 @@ git clone https://github.com/tpope/vim-fugitive.git
 echo "Installing Vim NerdTree"
 git clone https://github.com/preservim/nerdtree.git
 
-echo "Installing Vim vim-airline"
-git clone https://github.com/vim-airline/vim-airline.git
-
-echo "installing solarized colorscheme"
-git clone https://github.com/altercation/vim-colors-solarized.git
-
 echo "Installing Coc.nvim"
 mkdir -p ~/.vim/pack/coc/start && cd ~/.vim/pack/coc/start
 git clone --branch release https://github.com/neoclide/coc.nvim --depth=1
-
-cd $HOME

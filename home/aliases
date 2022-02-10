@@ -8,6 +8,7 @@ alias e='$EDITOR'
 alias co='cd $HOME/coding'
 alias dl='cd $HOME/Downloads'
 
+alias mail='aerc'
 alias econfig='$EDITOR $HOME/.dotfiles/nvim/init.vim'
 alias zconfig='$EDITOR $HOME/.dotfiles/shell/zshrc && source $HOME/.zshrc'
 alias alconfig='$EDITOR $HOME/.dotfiles/shell/aliases && source $HOME/.zshrc'

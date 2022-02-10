@@ -34,7 +34,7 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+space exec --no-startup-id rofi -show drun
-bindsym $mod+s exec --no-startup-id spotify
+bindsym $mod+s exec --no-startup-id chromium
 
 # change focus vim bindings
 bindsym $mod+h focus left
@@ -49,9 +49,9 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # Lock screen w/ i3 Lock
-bindsym $mod+Shift+l exec i3lock -e --color=0b140b 
-bindsym $mod+Shift+s exec /home/mike/.screenlayout/single_screen.sh
-bindsym $mod+Shift+d exec /home/mike/.screenlayout/default_dual.sh
+bindsym $mod+Shift+l exec i3lock --image=/home/mike/.dotfiles/lockscreen.png
+bindsym $mod+Shift+s exec /home/mike/.screenlayout/main-screen.sh
+bindsym $mod+Shift+d exec /home/mike/.screenlayout/default-dual.sh
 
 # change backlight
 # bindsym XF86AudioMute
@@ -90,12 +90,12 @@ bindsym $mod+a focus parent
 #----------------------------------------------------------------------#
 
 # Name workspaces
-set $ws1 "1  "
-set $ws2 "2  "
-set $ws3 "3  "
-set $ws4 "4  "
-set $ws5 "5  "
-set $ws6 "6  "
+set $ws1 " "
+set $ws2 " "
+set $ws3 " "
+set $ws4 " "
+set $ws5 " "
+set $ws6 " "
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -164,10 +164,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -206,12 +206,15 @@ bar {
 }
 
 #set gaps
+gaps outer 5
+gaps top 10
+gaps bottom 10
 gaps inner 5
 
 # swap caps lock and escape
-exec_always --no-startup-id xmodmap -e "clear lock"
-exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
-exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
+# exec_always --no-startup-id xmodmap -e "clear lock"
+# exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
+# exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
 
 exec ~/.fehbg  && picom -b --vsync
 exec redshift -t 6500:3500 -l 39.96:-75.17

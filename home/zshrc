@@ -133,3 +133,15 @@ PATH="$HOME/.local/bin:$PATH"
 bindkey -v
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+PATH="/home/mike/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/mike/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/mike/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/mike/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/mike/perl5"; export PERL_MM_OPT;
+
+function font-size(){
+    sed -r -i -e "s/(\ssize:) [0-9]+/\1 $1/g" ~/.alacritty.yml
+}
