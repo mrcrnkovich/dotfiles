@@ -8,4 +8,4 @@ xrdb ~load ~/.Xresources
 xrandr --output eDP1
 
 bluetoothctl power on
-exec i3
+exec sway

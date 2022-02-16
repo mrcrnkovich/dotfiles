@@ -4,7 +4,7 @@ set path+=**
 set number
 set relativenumber
 set encoding=utf-8
-set completeopt=noinsert,menuone,noselect
+set completeopt=longest,noinsert,menuone,noselect
 
 let mapleader = ","
 
@@ -14,7 +14,6 @@ set vb t_vb=
 set hidden
 set nowrap
 set textwidth=80
-" set colorcolumn=88
 set formatoptions=tcqrn1
 set tabstop=4
 set softtabstop=4
@@ -25,7 +24,7 @@ set noshiftround
 " Cursor motion
 set scrolloff=3
 set backspace=indent,eol,start
-set matchpairs+=<:> " use % to jump between pairs
+set matchpairs+=<:> 
 
 " Move up/down editor lines
 nnoremap j gj
@@ -61,26 +60,33 @@ set smartcase
 set incsearch
 set showmatch
 
+nnoremap <Leader>q :copen<CR>
+nnoremap <Leader>r :reg<CR>
+nnoremap <Leader>b :ls<CR>:b
+nnoremap <Leader>m :marks<CR>
+nnoremap <C-m> :make %
+nnoremap <Leader>c :!/usr/bin/perl -w %<CR>
 map <leader><space> :let @/=''<cr> " clear search
 inoremap jj <ESC>
-nmap <leader>t :NERDTreeToggle<CR>
+nmap <leader>t :Vexplore<CR>
 nmap <leader>f :Files<CR>
+nmap <leader>g :GFiles<CR>
+nnoremap <Leader>s :Rg<CR>
 
 " Helps force plugins to load correctly when it is turned back on below
 " For plugins to load correctly
 filetype off
 call plug#begin()
-Plug 'preservim/nerdtree'
 Plug 'tpope/fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 filetype plugin indent on
-
+set omnifunc=syntaxcomplete#Complete
 
 " Visualize tabs and newlines
 " Use your leader key + l to toggle on/off
@@ -88,21 +94,22 @@ set listchars=tab:▸\ ,eol:¬
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 
+" nmap <leader>t :NERDTreeToggle<CR>
 " ==== Coc.nvim === "
 " use <tab> for trigger completion and navigate to next complete item
- function! s:check_back_space() abort
-   let col = col('.') - 1
-   return !col || getline('.')[col - 1]  =~ '\s'
- endfunction
+" function! s:check_back_space() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~ '\s'
+" endfunction
  
- inoremap <silent><expr> <TAB>
-       \ pumvisible() ? "\<C-n>" :
-       \ <SID>check_back_space() ? "\<TAB>" :
-       \ coc#refresh()
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
  
 "Close preview window when completion is done.
- autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+" autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 " === coc.nvim === "
- nmap <silent> <leader>dd <Plug>(coc-definition)
- nmap <silent> <leader>dr <Plug>(coc-references)
- nmap <silent> <leader>dj <Plug>(coc-implementation)
+" nmap <silent> <leader>dd <Plug>(coc-definition)
+" nmap <silent> <leader>dr <Plug>(coc-references)
+" nmap <silent> <leader>dj <Plug>(coc-implementation)
