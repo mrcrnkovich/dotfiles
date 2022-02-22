@@ -1,0 +1,12 @@
+pkgname=mcrnkovich-app
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Mcrnkovich Applications packages"
+arch=("x86_64")
+depends=(
+    'aerc'
+    'firefox'
+    'chromium'
+    'gimp'
+    'libreoffice-fresh'
+)

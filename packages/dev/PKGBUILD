@@ -1,0 +1,27 @@
+pkgname=mcrnkovich-devel
+pkgver=1.0.1
+pkgrel=1
+pkgdesc="Mcrnkovich Developer packages"
+arch=("x86_64")
+depends=(
+    'docker'
+    'docker-compose'
+    'gcc'
+    'git'
+    'ghc'
+    'jq'
+    'lynx'
+    'make'
+    'nodejs'
+    'openssh'
+    'pyenv'
+    'python'
+    'python-pip'
+    'python-pipenv'
+    'sed'
+    'tmux'
+    'vim'
+    'zsh'
+    'fzf'
+    'ripgrep'
+)

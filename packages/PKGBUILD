@@ -1,0 +1,83 @@
+pkgname=mcrnkovich-app
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Mcrnkovich Applications packages"
+arch=("x86_64")
+depends=( 'aerc' 'chromium' 'firefox' 'gimp' 'libreoffice-fresh')
+
+pkgname=mcrnkovich-base
+pkgver=1.0.2
+pkgrel=1
+pkgdesc="Base Arch Linux Packages"
+depends=( 
+    'acpi' 'alacritty' 'autoconf' 'automake' 'base' 'bc'
+    'binutils' 'bison' 'bluez' 'bluez-utils' 'docker' 'fakeroot'
+    'file' 'findutils' 'flex' 'fwupd' 'fzf' 'gawk' 'gcc' 'gettext'
+    'git' 'grep' 'groff' 'gzip' 'htop' 'iwd' 'libtool' 'linux' 'linux-firmware'
+    'm4' 'make' 'nmap' 'openssh' 'pacman' 'pacman-contrib' 'paprefs' 'patch'
+    'perf' 'pkgconf' 'ripgrep' 'sed' 'stack' 'strace' 'sudo' 'texinfo' 'tmux'
+    'ttf-fira-code' 'ttf-font-awesome' 'ttf-opensans' 'ttf-roboto'
+    'unzip' 'vim' 'wget' 'which' 'zsh'
+)
+pkgname=mcrnkovich-devel
+pkgver=1.0.1
+pkgrel=1
+pkgdesc="Mcrnkovich Developer packages"
+arch=("x86_64")
+depends=(
+    'docker' 'docker-compose' 'gcc' 'git' 'ghc' 'jq' 'lynx' 'make' 'nodejs'
+    'openssh' 'pyenv' 'python' 'python-pip' 'python-pipenv' 'sed' 'tmux'
+    'vim' 'zsh' 'fzf' 'ripgrep'
+)
+pkgname=mcrnkovich-sway
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Sway on Wayland"
+arch=("x86_64")
+depends=(
+    'dunst'
+    'gnome-keyring'
+    'gnome-themes-extra'
+    'sway' 'swayidle' 'swaylock' 'waybar'
+    'xdg-desktop-portal-wlr'
+    'xf86-video-intel'
+    'xf86-video-vesa'
+    'qt5-wayland'
+)
+pkgname=mcrnkovich-utils
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Utils for Sound, Printing, Bluetooth"
+arch=("x86_64")
+depends=(
+    'alsa-firmware' 'alsa-utils'
+    'bluez' 'bluez-utils'
+    'cups' 'cups-pdf'
+    'pamixer' 'pavucontrol' 'pulseaudio' 'pulseaudio-bluetooth'
+    'sof-firmware' 'sof-tools'
+)
+pkgname=mcrnkovich-x11-i3
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="X11 and i3 meta package"
+arch=("x86_64")
+depends=(
+    'arandr'
+    'bluez' 'bluez-utils'
+    'dmenu' 'feh'
+    'gnome-keyring'
+    'gnome-themes-extra'
+    'i3-wm' 'i3blocks' 'i3lock' 'i3status'
+    'lxappearance 'picom' 'redshift' 'rofi' 'scrot'
+    'xf86-video-intel'
+    'xf86-video-vesa'
+    'xorg-bdftopcf' 'xorg-docs' 'xorg-font-util' 'xorg-fonts-100dpi' 'xorg-fonts-75dpi'
+    'xorg-iceauth' 'xorg-mkfontscale' 'xorg-server' 'xorg-server-devel' 'xorg-server-xephyr'
+    'xorg-server-xnest' 'xorg-server-xvfb' 'xorg-sessreg' 'xorg-smproxy' 'xorg-x11perf'
+    'xorg-xauth' 'xorg-xbacklight' 'xorg-xcmsdb' 'xorg-xcursorgen' 'xorg-xdpyinfo'
+    'xorg-xdriinfo' 'xorg-xev' 'xorg-xgamma' 'xorg-xhost' 'xorg-xinit' 'xorg-xinput'
+    'xorg-xkbevd' 'xorg-xkbutils' 'xorg-xkill' 'xorg-xlsatoms' 'xorg-xlsclients' 'xorg-xmodmap'
+    'xorg-xpr' 'xorg-xprop' 'xorg-xrandr' 'xorg-xrdb' 'xorg-xrefresh' 'xorg-xset' 'xorg-xsetroot'
+    'xorg-xvinfo' 'xorg-xwayland' 'xorg-xwd' 'xorg-xwininfo' 'xorg-xwud'
+    'zathura' 'zathura-pdf-mupdf'
+)
