@@ -62,9 +62,8 @@ set showmatch
 
 nnoremap <Leader>q :copen<CR>
 nnoremap <Leader>r :reg<CR>
-nnoremap <Leader>b :ls<CR>:b
+nnoremap <Leader>b :files<CR>:b
 nnoremap <Leader>m :marks<CR>
-nnoremap <C-m> :make %
 nnoremap <Leader>c :!/usr/bin/perl -w %<CR>
 map <leader><space> :let @/=''<cr> " clear search
 inoremap jj <ESC>

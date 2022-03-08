@@ -12,7 +12,7 @@ interval=5
 
 [time]
 label=  
-command= date '+%H:%M'
+command= date '+%I:%M %P'
 interval=10
 
 [day]

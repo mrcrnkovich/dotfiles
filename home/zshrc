@@ -5,11 +5,12 @@
 export ZSH="$HOME/.oh-my-zsh"
 source $HOME/.dotfiles/home/aliases
 
+alias web="chromehist"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bira"
+ZSH_THEME="eastwood"
 
 GTK_BACKEND=wayland
 CLUTTER_BACKEND=wayland
@@ -155,3 +156,4 @@ function list_meta_packages(){
     | head --lines=-1 \
     | sed "s/    '\(.*\)'/\1/g"
 }
+alias GBranch="git branch -a|fzf|xargs git checkout"

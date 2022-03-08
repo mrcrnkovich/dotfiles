@@ -1,13 +1,19 @@
 general {
     colors = true
     interval = 5
+    color_good = '#98971a'
+    color_bad  = '#cc241d'
 }
 
-order += "ipv6"
+order += "tztime phl"
+order += "memory"
+order += "battery 0"
+order += "wireless wlan0"
 
 wireless wlan0 {
-        format_up = "W: (%quality at %essid, %bitrate) %ip"
-        format_down = "W: down"
+        format_up = "  %essid (%quality)"
+        format_down = "  down"
+        separator_block_width = 20
 }
 
 ethernet eth0 {
@@ -16,25 +22,35 @@ ethernet eth0 {
 }
 
 battery 0 {
-        format = "%status %percentage %remaining %emptytime"
+        format = "%status %percentage (%remaining)"
         format_down = "No battery"
         status_chr = "⚡ CHR"
-        status_bat = "🔋 BAT"
+        status_bat = "🔋 "
         status_unk = "? UNK"
-        status_full = "☻ FULL"
+        status_full = "☻ "
         path = "/sys/class/power_supply/BAT%d/uevent"
         low_threshold = 10
+        integer_battery_capacity = true 
+        separator_block_width = 20
 }
 
-
 memory {
-        format = "%used"
+        format = "%used/%total"
         threshold_degraded = "10%"
         format_degraded = "MEMORY: %free"
+        separator_block_width = 20
 }
 
 disk "/" {
         format = "%free"
+}
+
+tztime phl {
+    format = "%time"
+    format = "  %I:%M %P    %Y-%m-%d"
+    timezone = "America/New_York"
+    separator_block_width = 20
+
 }
 
 read_file uptime {
