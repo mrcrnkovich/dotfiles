@@ -1,0 +1,4 @@
+node_modules
+yarn.lock
+*.private
+**/*.pkg.tar.zst
