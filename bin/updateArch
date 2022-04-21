@@ -1,0 +1,5 @@
+#!/bin/sh
+sudo pacman -Syu --noconfirm
+sudo paccache -rk1
+
+#dunstify -u low "System update complete"

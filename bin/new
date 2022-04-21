@@ -1,8 +1,0 @@
-#! /bin/sh
-
-TYPE= echo "$1" | gawk -F. ' { print $2 } '
-
-echo $TYPE
-echo "#! /bin/bash" > $1
-chmod +x $1
-$EDITOR $1

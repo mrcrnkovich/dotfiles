@@ -12,7 +12,7 @@ alias web="chromehist"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="eastwood"
 
-GTK_BACKEND=wayland
+# GTK_BACKEND=wayland
 CLUTTER_BACKEND=wayland
 
 # Set list of themes to pick from when loading at random
