@@ -9,6 +9,10 @@ vim.keymap.set('n', '<C-l>', '<C-w>l')
 --swap windows
 vim.keymap.set('n', '<C-x>', '<C-w>x')
 
+--Terminal Setup
+vim.keymap.set('t', '<ESC>', [[<C-\><C-n>]])
+vim.keymap.set('t', '<C-v><ESC>', '<ESC>')
+
 --Quick Path completion
 vim.keymap.set('i', '<C-l>', '<C-x><C-l>')
 vim.keymap.set('i', '<C-f>', '<C-x><C-f>')

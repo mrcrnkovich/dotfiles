@@ -1,6 +1,7 @@
 print("Hello Mike")
 
 -- Leader ,
+-- This has to be the first think you set
 vim.g.leader = ','
 
 -- Expand path, confirm if necessary in neovim
