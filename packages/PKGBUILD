@@ -1,6 +1,6 @@
 pkgbase=mcrnkovich
-pkgname=(mcrnkovich-base mcrnkovich-sway mcrnkovich-utils mcrnkovich-xwayland)
-pkgver=1.1
+pkgname=(mcrnkovich-base mcrnkovich-apps mcrnkovich-sway mcrnkovich-utils mcrnkovich-xwayland)
+pkgver=1.2
 pkgrel=1
 pkgdesc="mcrnkovich applications packages"
 arch=("x86_64")
@@ -8,8 +8,7 @@ arch=("x86_64")
 package_mcrnkovich-apps() {
     depends=( 'aerc' 
         'chromium' 'firefox' 'lynx'
-        'libreoffice-fresh' 
-        'gimp' 'ncspot'
+        'libreoffice-fresh' 'gimp' 'ncspot'
         'zathura' 'zathura-pdf-mupdf'
     )
 }
@@ -27,8 +26,8 @@ package_mcrnkovich-base() {
         'paprefs' 'patch'
         'perf' 'pkgconf' 'stack' 'strace' 'sudo' 'texinfo'
         'gzip' 'unzip'
-        'which'
-        'zsh'
+        'terminus-font'
+        'rsync' 'which' 'zsh'
     )
 
     depends+=( 'docker' 'docker-compose' )
@@ -40,21 +39,22 @@ package_mcrnkovich-base() {
 }
 
 package_mcrnkovich-sway() {
-    depends=('sway' 'swayidle' 'swaylock')
+    depends=('sway' 'swayidle' 'swaylock' 'i3status' )
     depends+=(
         'gnome-keyring' 'gnome-themes-extra'
         'lxappearance' 'qt5-wayland'
-        'xdg-desktop-portal-wlr'
-        'i3status'
     )
-    
+   
+    # app launcher 
+    depends+=( 'fuzzel' )   
+ 
     # Fonts
     depends+=( 'ttf-fira-code' 'ttf-font-awesome' 'ttf-opensans' 'ttf-roboto')
 
     depends+=( 'xf86-video-intel' 'xf86-video-vesa')
-    depends+=( 'dunst' 'light' )
+    depends+=( 'dunst' 'light' 'imv')
     # AUR packages, move to new package
-    # depends+=( 'rofi-lbonn-wayland' 'wlsunset' )
+    # depends+=( 'wlsunset' )
 }
 
 package_mcrnkovich-utils(){
@@ -62,21 +62,21 @@ package_mcrnkovich-utils(){
     arch=("x86_64")
     depends=(
         'alsa-firmware' 'alsa-utils'
-        'pamixer' 'pavucontrol' 'pulseaudio' 'pulseaudio-bluetooth'
+        'pavucontrol' 'pulseaudio-bluetooth'
         'sof-firmware' 'sof-tools'
-        'pipewire' 'pipewire-alsa'
-        'pipewire-jack' 'pipewire-pulse'
-        'wireplumber'
     )
+     depends+=(
+         'pipewire' 'pipewire-alsa' 'pipewire-jack' 'pipewire-pulse'
+         'wireplumber' 'xdg-desktop-portal-wlr'
+     )
     depends+=( 'cups' 'cups-pdf' )
     depends+=( 'bluez' 'bluez-utils' )
 }
 
 package_mcrnkovich-xwayland(){
-    pkgdesc="X11 and i3 meta package"
+    pkgdesc="X11 meta package"
     arch=("x86_64")
     depends=(
-        'rofi'
         'xorg-bdftopcf' 'xorg-docs' 'xorg-font-util' 'xorg-fonts-100dpi' 'xorg-fonts-75dpi'
         'xorg-iceauth' 'xorg-mkfontscale' 'xorg-server' 'xorg-server-devel' 'xorg-server-xephyr'
         'xorg-server-xnest' 'xorg-server-xvfb' 'xorg-sessreg' 'xorg-smproxy' 'xorg-x11perf'
