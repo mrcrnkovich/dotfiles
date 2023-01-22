@@ -79,7 +79,7 @@ if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 fi
 
 # Load aliases
-[ -e /home/mike/.aliases ] && source /home/mike/.aliases
+[ -e "${ZDOTDIR}/aliases" ] && source "${ZDOTDIR}/aliases"
 
 #---------------------------------------------------------#
 #                      FZF FUNCTIONS                      #
