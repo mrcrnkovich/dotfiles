@@ -1,5 +1,16 @@
-#!/bin/sh
-sudo pacman -Syu --noconfirm
-sudo paccache -rk1
+#!/usr/bin/env python3
 
-#dunstify -u low "System update complete"
+from subprocess import run
+
+def main():
+    process = [
+                ["/home/mike/.local/bin/update-aur-repo"],
+                ["sudo", "pacman", "-Syu", "--noconfirm"],
+                ["sudo", "paccache", "-rk1"],
+            ]
+
+    for task in process:
+        run(task)
+
+if __name__ == '__main__':
+    main()
