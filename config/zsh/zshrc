@@ -1,0 +1,122 @@
+autoload -U compinit && compinit
+
+setopt AUTO_CD
+setopt CDABLE_VARS
+setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
+setopt PUSHD_SILENT
+
+setopt CORRECT
+
+setopt APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt EXTENDED_HISTORY
+setopt HIST_SAVE_NO_DUPS
+
+# enable VI mode
+bindkey -v
+export KEYTIMEOUT=1
+
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd 'v' edit-command-line
+
+# Autocompletion using arrow keys ( based on history )
+bindkey '\e[A' history-search-backward
+bindkey '\e[B' history-search-forward
+
+function cursor_mode {
+
+    # See https://ttssh2.osdn.jp/manual/4/en/usage/tips/vim.html for cursor shapes
+    cursor_block='\e[2 q'
+    cursor_beam='\e[6 q'
+
+    function zle-keymap-select {
+        if [[ ${KEYMAP} == vicmd ]] ||
+            [[ $1 = 'block' ]]; then
+            echo -ne $cursor_block
+        elif [[ ${KEYMAP} == main ]] ||
+            [[ ${KEYMAP} == viins ]] ||
+            [[ ${KEYMAP} = '' ]] ||
+            [[ $1 = 'beam' ]]; then
+            echo -ne $cursor_beam
+        fi
+    }
+
+    function zle-line-init {
+        echo -ne $cursor_beam
+    }
+
+    zle -N zle-keymap-select
+    zle -N zle-line-init
+}
+
+cursor_mode
+
+function prompt_git_branch {
+    autoload -Uz vcs_info
+    precmd() { vcs_info }
+    setopt PROMPT_SUBST
+
+    zstyle ':vcs_info:*' enable git
+    if [[ $GIT_PROMPT_CHANGES -ne 0 ]]; then
+        zstyle ':vcs_info:*' check-for-changes true
+        zstyle ':vcs_info:git:*' unstagedstr '*'
+        zstyle ':vcs_info:git:*' stagedstr '*'
+        zstyle ':vcs_info:git:*' formats ' %b%u%c'
+    else
+        zstyle ':vcs_info:git:*' formats '[%b]'
+    fi
+}
+
+#Set up prompt - Maybe move this
+prompt_git_branch
+RPROMPT=$'%F{green}${vcs_info_msg_0_}%f%F{white}[%~]%f'
+PROMPT=$'%F{white}%n@%m%f %B%F{yellow}>_ %f%b'
+
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+    exec sway
+fi
+
+# Load aliases
+[ -e /home/mike/.aliases ] && source /home/mike/.aliases
+
+#---------------------------------------------------------#
+#                      FZF FUNCTIONS                      #
+#---------------------------------------------------------#                      
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# fo [FUZZY PATTERN] - Open the selected file with the default editor
+#   - Bypass fuzzy finder if there's only one match (--select-1)
+#   - Exit if there's no match (--exit-0)
+fo() {
+  local files
+  IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
+  [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
+}
+
+ef() {
+    $EDITOR $(fzf)
+}
+
+# fh [FUZZY PATTERN] - Search in command history
+fh() {
+  print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
+}
+
+mygc(){
+    git clone git@github.com:mrcrnkovich/$1.git
+}
+
+function font-size(){
+    sed -r -i -e "s/(\ssize:) [0-9]+/\1 $1/g" ~/.alacritty.yml
+}
+
+function list_meta_packages(){
+    cat $1 \
+    | tail --lines=+7 \
+    | head --lines=-1 \
+    | sed "s/    '\(.*\)'/\1/g"
+}
+

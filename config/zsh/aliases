@@ -1,0 +1,22 @@
+alias GBranch="git branch -a|fzf|xargs git checkout"
+
+alias ls='ls --color'
+alias tree='tree -C'
+alias vi='nvim'
+alias :q='exit'
+alias :wq='exit'
+
+alias e='$EDITOR'
+alias co='cd $HOME/coding'
+alias dl='cd $HOME/Downloads'
+
+alias web="chromehist"
+alias mail='aerc'
+alias vv='$EDITOR $HOME/.dotfiles/nvim/init.vim'
+alias zconfig='$EDITOR $HOME/.dotfiles/shell/zshrc && source $HOME/.zshrc'
+
+alias wifi-networks="iwctl station wlan0 get-networks"
+alias wifi-connect="iwctl station wlan0 connect"
+
+alias brscan="scanimage --device='airscan:w0:Brother MFC-L2750DW' --format=pdf --progress"
+alias batch-scan="scanimage --source ADF --device='airscan:w0:Brother MFC-L2750DW' --format=pdf --progress --batch"
